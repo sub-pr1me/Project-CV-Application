@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'geologica';
+    src: url(../../font/Geologica/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'jura';
+    src: url(../../font/Jura/Jura-VariableFont_wght.ttf);
+}
+
+.form_container div {
+    outline: 1px solid greenyellow;
+}
+
+.form_container,
+.buttons {
+    display: flex;
+}
+
+.form_container {
+    flex-direction: column;
+    height: 100vh;
+    gap: 20px;
+}
+
+.app_name {
+    font-family: 'jura';
+    font-size: 15px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.buttons {   
+    font-family: 'geologica';
+}

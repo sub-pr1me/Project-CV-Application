@@ -1,0 +1,23 @@
+
+.btn_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20vw;
+    color: white;
+}
+
+.img_container img {
+    width: 8vw;
+    filter: invert(100%);
+    align-self: center;
+}
+
+.text {
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 0px 10px;
+    overflow-wrap: break-word;
+}
