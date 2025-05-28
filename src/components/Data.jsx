@@ -1,10 +1,11 @@
 import React from 'react'
-import styles from '../styles/Form.module.css'
-import HeaderButton from '../components/HeaderButton.jsx'
+import styles from '../styles/Data.module.css'
+import HeaderButton from './HeaderButton.jsx'
+import General from './General.jsx'
 
-const Form = () => {
+const Data = ({formData, setFormData, setItems}) => {
   return (
-    <div className={styles.form_container}>
+    <div className={styles.data_container}>
         <div className={styles.app_name}>CV BUILDER v1.0</div>
         <div className={styles.buttons}>
             <HeaderButton 
@@ -28,8 +29,13 @@ const Form = () => {
               text={'EXPERIENCE'}
             />
         </div>
+        <General
+          formData ={formData}
+          setFormData={setFormData}
+          setItems={setItems}
+        />
     </div>
   )
 }
 
-export default Form
+export default Data

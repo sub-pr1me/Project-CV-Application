@@ -8,18 +8,20 @@
     src: url(../../font/Jura/Jura-VariableFont_wght.ttf);
 }
 
-.form_container div {
+/* .form_container div {
     outline: 1px solid greenyellow;
-}
+} */
 
-.form_container,
+.data_container,
 .buttons {
     display: flex;
 }
 
-.form_container {
+.data_container {
     flex-direction: column;
-    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
     gap: 20px;
 }
 
@@ -30,8 +32,10 @@
     text-align: center;
     color: white;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .buttons {   
     font-family: 'geologica';
+    margin-bottom: 20px;
 }
