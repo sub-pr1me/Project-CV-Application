@@ -11,7 +11,13 @@ function App() {
       photo: '',
       location: 'NY, USA',
       phone: '+ 9 999 999 9999',
-      email: 'apu.forever@gmail.com'
+      email: 'apu.forever@gmail.com',
+
+      linkedin: 'link',
+      github: 'link',
+      facebook: 'link',
+      twitter: 'link',
+      whatsapp: 'link'
     }
   );
 
@@ -23,7 +29,13 @@ function App() {
       photo: '',
       location: '',
       phone: '',
-      email: ''
+      email: '',
+
+      linkedin: '',
+      github: '',
+      facebook: '',
+      twitter: '',
+      whatsapp: ''
     }
   );
 
@@ -38,4 +50,5 @@ function App() {
     </>
   )
 }
+
 export default App

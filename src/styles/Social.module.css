@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'geologica';
+    src: url(../../font/Geologica/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'jura';
+    src: url(../../font/Jura/Jura-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'lubrifont';
+    src: url(../../font/WDXL_Lubrifont_TC/WDXLLubrifontTC-Regular.ttf);
+}
+
+/* * {
+    outline: 1px solid greenyellow;
+} */
+
+.social_container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.title,
+label {
+    font-family: 'lubrifont';
+    color: white;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+label img {
+    width: 30px;
+    filter: invert(100%);
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    align-self: center;
+    width: fit-content;
+}
+
+.input_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input_wrapper:nth-child(7) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label:has(+ input[type='file']) {
+    margin-bottom: 2px;
+}
+
+input[type='file'] {
+    background-color: rgb(207, 255, 239);
+    width: 250px;
+
+}
+
+input {
+    font-family: 'geologica';
+    font-weight: 300;
+    border: none;
+}
+
+button {
+    font-family: 'jura';
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.shown {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
