@@ -37,7 +37,7 @@ const General = ({formData, setFormData, setItems}) => {
         <div className={styles.title}>Enter your general info:</div>
         <div className={styles.input_container}>
             <div className={styles.input_wrapper}>
-                <label htmlFor='firstname'>First name:</label>
+                <label htmlFor='firstname'>First Name:</label>
                 <input
                     type='text' 
                     id='firstname'
@@ -51,7 +51,7 @@ const General = ({formData, setFormData, setItems}) => {
                 />
             </div>
             <div className={styles.input_wrapper}>
-                <label htmlFor='lastname'>Last name:</label>
+                <label htmlFor='lastname'>Last Name:</label>
                 <input
                     type='text' 
                     id='lastname'

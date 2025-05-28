@@ -9,14 +9,14 @@
 }
 
 .img_container img {
-    width: 8vw;
+    width: clamp(30px, 8vw, 8vw);
     filter: invert(100%);
     align-self: center;
 }
 
 .text {
     text-align: center;
-    font-size: 10px;
+    font-size: clamp(10px, 2vw, 2vw);
     line-height: 12px;
     padding: 0px 10px;
     overflow-wrap: break-word;

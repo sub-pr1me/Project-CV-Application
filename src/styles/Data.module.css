@@ -27,7 +27,7 @@
 
 .app_name {
     font-family: 'jura';
-    font-size: 15px;
+    font-size: clamp(15px, 3.5vw, 3.5vw);
     font-weight: 900;
     text-align: center;
     color: white;
@@ -37,5 +37,5 @@
 
 .buttons {   
     font-family: 'geologica';
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
