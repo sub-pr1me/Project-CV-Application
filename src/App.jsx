@@ -12,6 +12,7 @@ function App() {
       location: 'NY, USA',
       phone: '+ 9 999 999 9999',
       email: 'apu.forever@gmail.com',
+      summary: 'This is me.',
 
       linkedin: 'link',
       github: 'link',
@@ -30,6 +31,7 @@ function App() {
       location: '',
       phone: '',
       email: '',
+      summary: '',
 
       linkedin: '',
       github: '',

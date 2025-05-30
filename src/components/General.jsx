@@ -121,6 +121,20 @@ const General = ({formData, setFormData, setItems}) => {
                 />
             </div>
             <div className={styles.input_wrapper}>
+                <label htmlFor='summary'>Summary:</label>
+                <textarea
+                    type='text' 
+                    id='summary'
+                    autoComplete='false'
+                    required
+                    value={formData.summary}
+                    onChange={(e) =>
+                        setFormData(
+                            {...formData, summary: e.target.value})
+                    }
+                />
+            </div>
+            <div className={styles.input_wrapper}>
                 <label htmlFor='photo'>Upload Photo:</label>
                 <input
                     type='file' 

@@ -15,6 +15,7 @@
 .data_container,
 .buttons {
     display: flex;
+    overflow-x: clip;
 }
 
 .data_container {
@@ -48,10 +49,12 @@
 
 .gen {
     transform: translateX(25%);
+    transition: all 0.2s ease-in;
 }
 
 .soc {
     transform: translateX(-25%);
+    transition: all 0.2s ease-in;
 }
 
 .section_wrapper {

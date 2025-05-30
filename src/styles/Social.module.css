@@ -62,7 +62,7 @@ label img {
     gap: 5px;
 }
 
-.input_wrapper:nth-child(7) {
+.input_wrapper:nth-child(6) {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -84,10 +84,11 @@ input {
     border: none;
 }
 
-button {
+.social_container button {
     font-family: 'jura';
     font-weight: 900;
     font-size: 20px;
+    margin-top: 10px;
 }
 
 .shown {
