@@ -34,7 +34,7 @@ const General = ({formData, setFormData, setItems}) => {
 
   return (
     <form className={styles.general_container} onSubmit={handleSubmit}>
-        <div className={styles.title}>Enter your general info:</div>
+        <div className={styles.title}>Add general info:</div>
         <div className={styles.input_container}>
             <div className={styles.input_wrapper}>
                 <label htmlFor='firstname'>First Name:</label>

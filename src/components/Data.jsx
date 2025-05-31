@@ -2,19 +2,21 @@ import React, { useState } from 'react'
 import styles from '../styles/Data.module.css'
 import General from './General.jsx'
 import Social from './Social.jsx'
+import Education from './Education.jsx'
 
-const Data = ({formData, setFormData, setItems}) => {
+const Data = ({formData, setFormData, setItems, educationEntryCount, addEducationEntry}) => {
   const [section, setSection] = useState('gen')
 
   function switchSection(text) {
     if (text === 'gen') {
       console.log(text);
-      setSection(text)
+      setSection(text);
     } else if (text === 'soc') {
       console.log(text);
-      setSection(text)
+      setSection(text);
     } else if (text === 'edu') {
       console.log(text);
+      setSection(text);
     } else if (text === 'skill') {
       console.log(text);
     } else if (text === 'exp') {
@@ -60,7 +62,8 @@ const Data = ({formData, setFormData, setItems}) => {
             </div>
             <div className={`${styles.sections_container} 
             ${section === 'gen' ? styles.gen : null}
-            ${section === 'soc' ? styles.soc : null}`}>
+            ${section === 'soc' ? styles.soc : null}
+            ${section === 'edu' ? styles.edu : null}`}>
               <div className={`${styles.section_wrapper} ${styles.general}`}></div>
                 <General
                   formData ={formData}
@@ -71,6 +74,13 @@ const Data = ({formData, setFormData, setItems}) => {
                   formData ={formData}
                   setFormData={setFormData}
                   setItems={setItems}
+                />
+                <Education
+                  formData ={formData}
+                  setFormData={setFormData}
+                  setItems={setItems}
+                  educationEntryCount={educationEntryCount}
+                  addEducationEntry={addEducationEntry}
                 />
           </div>          
         </div>            

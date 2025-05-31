@@ -30,7 +30,7 @@ const Social = ({formData, setFormData, setItems}) => {
 
   return (
     <form className={styles.social_container} onSubmit={handleSubmit}>
-        <div className={styles.title}>Enter social networks links:</div>
+        <div className={styles.title}>Add social networks links:</div>
         <div className={styles.input_container}>
             <div className={styles.input_wrapper}>
                 <label htmlFor='linkedin'><img src="../../icon/linkedin-plain.svg" alt="Linked In" /></label>
