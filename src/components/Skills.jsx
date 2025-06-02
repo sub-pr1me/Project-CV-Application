@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
-import styles from '../styles/General.module.css'
+import styles from '../styles/Skills.module.css'
 
-const General = ({formData, setFormData, items, setItems}) => {
+const Skills = ({formData, setFormData, items, setItems}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      setItems({...items, general: formData.general});
+      setItems({...items, skills: formData.skills});
       setShowSubmit(!showSubmit);
       setShowEdit(!showEdit);
       e.target.firstChild.nextSibling.firstChild.firstChild.nextSibling.disabled = true;
@@ -17,7 +17,6 @@ const General = ({formData, setFormData, items, setItems}) => {
       e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
       e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
       e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
     };
   
     const handleClick = (e) => {
@@ -29,128 +28,98 @@ const General = ({formData, setFormData, items, setItems}) => {
       e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
       e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
       e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
     };
 
   return (
-    <form className={styles.general_container} onSubmit={handleSubmit}>
-        <div className={styles.title}>Add general info:</div>
+    <form className={styles.skills_container} onSubmit={handleSubmit}>
+        <div className={styles.title}>Add professional skills info:</div>
         <div className={styles.input_container}>
             <div className={styles.input_wrapper}>
-                <label htmlFor='firstname'>First Name:</label>
+                <label htmlFor='01'># 1:</label>
                 <input
                     type='text' 
-                    id='firstname'
+                    id='01'
                     autoComplete='false'
-                    required
-                    value={formData.general.firstname}
+                    // required
+                    value={formData.skills[0]}
                     onChange={(e) =>
                         setFormData(draft => {
-                            draft.general.firstname = e.target.value;   
+                            draft.skills[0] = e.target.value;
                         })
                     }
                 />
             </div>
             <div className={styles.input_wrapper}>
-                <label htmlFor='lastname'>Last Name:</label>
+                <label htmlFor='02'># 2:</label>
                 <input
                     type='text' 
-                    id='lastname'
+                    id='02'
                     autoComplete='false'
-                    required
-                    value={formData.general.lastname}
+                    // required
+                    value={formData.skills[1]}
                     onChange={(e) =>
                         setFormData(draft => {
-                            draft.general.lastname = e.target.value;   
+                            draft.skills[1] = e.target.value;
                         })
                     }
                 />
             </div>
             <div className={styles.input_wrapper}>
-                <label htmlFor='profession'>Profession:</label>
+                <label htmlFor='03'># 3:</label>
                 <input
                     type='text' 
-                    id='profession'
+                    id='03'
                     autoComplete='false'
-                    required
-                    value={formData.general.profession}
+                    // required
+                    value={formData.skills[2]}
                     onChange={(e) =>
                         setFormData(draft => {
-                            draft.general.profession = e.target.value;   
+                            draft.skills[2] = e.target.value;
                         })
                     }
                 />
             </div>
             <div className={styles.input_wrapper}>
-                <label htmlFor='location'>Location:</label>
+                <label htmlFor='04'># 4:</label>
                 <input
                     type='text' 
-                    id='location'
+                    id='04'
                     autoComplete='false'
-                    required
-                    value={formData.general.location}
+                    // required
+                    value={formData.skills[3]}
                     onChange={(e) =>
                         setFormData(draft => {
-                            draft.general.location = e.target.value;   
+                            draft.skills[3] = e.target.value;
                         })
                     }
                 />
             </div>
             <div className={styles.input_wrapper}>
-                <label htmlFor='phone'>Phone:</label>
+                <label htmlFor='05'># 5:</label>
                 <input
-                    type='tel' 
-                    id='phone'
-                    autoComplete='false'
-                    required
-                    value={formData.general.phone}
-                    onChange={(e) =>
-                        setFormData(draft => {
-                            draft.general.phone = e.target.value;   
-                        })
-                    }
-                />
-            </div>
-            <div className={styles.input_wrapper}>
-                <label htmlFor='email'>E-mail:</label>
-                <input
-                    type='email' 
-                    id='email'
-                    autoComplete='false'
-                    required
-                    value={formData.general.email}
-                    onChange={(e) =>
-                        setFormData(draft => {
-                            draft.general.email = e.target.value;   
-                        })
-                    }
-                />
-            </div>
-            <div className={styles.input_wrapper}>
-                <label htmlFor='summary'>Summary:</label>
-                <textarea
                     type='text' 
-                    id='summary'
+                    id='05'
                     autoComplete='false'
-                    required
-                    value={formData.general.summary}
+                    // required
+                    value={formData.skills[4]}
                     onChange={(e) =>
                         setFormData(draft => {
-                            draft.general.summary = e.target.value;   
+                            draft.skills[4] = e.target.value;
                         })
                     }
                 />
             </div>
             <div className={styles.input_wrapper}>
-                <label htmlFor='photo'>Upload Photo:</label>
+                <label htmlFor='06'># 6:</label>
                 <input
-                    type='file' 
-                    id='photo'
+                    type='text' 
+                    id='06'
                     autoComplete='false'
-                    value={formData.general.photo}
+                    // required
+                    value={formData.skills[5]}
                     onChange={(e) =>
                         setFormData(draft => {
-                            draft.general.photo = e.target.value;   
+                            draft.skills[5] = e.target.value;
                         })
                     }
                 />
@@ -162,4 +131,4 @@ const General = ({formData, setFormData, items, setItems}) => {
   )
 }
 
-export default General
+export default Skills

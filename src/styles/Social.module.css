@@ -54,6 +54,7 @@ label img {
     gap: 30px;
     align-self: center;
     width: fit-content;
+    margin-bottom: 20px;
 }
 
 .input_wrapper {

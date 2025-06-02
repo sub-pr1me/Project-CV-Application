@@ -3,8 +3,10 @@ import styles from '../styles/Data.module.css'
 import General from './General.jsx'
 import Social from './Social.jsx'
 import Education from './Education.jsx'
+import Skills from './Skills.jsx'
 
-const Data = ({formData, setFormData, setItems, educationEntryCount, addEducationEntry}) => {
+const Data = ({formData, setFormData, items, setItems, educationEntryCount,
+              addEducationEntry, shownEntries, hideEducationEntry, showEducationEntry}) => {
   const [section, setSection] = useState('gen')
 
   function switchSection(text) {
@@ -17,8 +19,9 @@ const Data = ({formData, setFormData, setItems, educationEntryCount, addEducatio
     } else if (text === 'edu') {
       console.log(text);
       setSection(text);
-    } else if (text === 'skill') {
+    } else if (text === 'ski') {
       console.log(text);
+      setSection(text);
     } else if (text === 'exp') {
       console.log(text);
     };
@@ -47,7 +50,7 @@ const Data = ({formData, setFormData, setItems, educationEntryCount, addEducatio
                 </div>
                 <div className={styles.text}>EDUCATION</div>
               </div>
-              <div className={styles.btn_container} onClick={() => switchSection('skill')}>
+              <div className={styles.btn_container} onClick={() => switchSection('ski')}>
                 <div className={styles.img_container}>
                   <img src={'../icon/account-tie.svg'} alt={'Skills'} />
                 </div>
@@ -63,24 +66,37 @@ const Data = ({formData, setFormData, setItems, educationEntryCount, addEducatio
             <div className={`${styles.sections_container} 
             ${section === 'gen' ? styles.gen : null}
             ${section === 'soc' ? styles.soc : null}
-            ${section === 'edu' ? styles.edu : null}`}>
+            ${section === 'edu' ? styles.edu : null}
+            ${section === 'ski' ? styles.ski : null}`}>
               <div className={`${styles.section_wrapper} ${styles.general}`}></div>
                 <General
                   formData ={formData}
                   setFormData={setFormData}
+                  items={items}
                   setItems={setItems}
                 />
                 <Social
                   formData ={formData}
                   setFormData={setFormData}
+                  items={items}
                   setItems={setItems}
                 />
                 <Education
                   formData ={formData}
                   setFormData={setFormData}
+                  items={items}
                   setItems={setItems}
                   educationEntryCount={educationEntryCount}
                   addEducationEntry={addEducationEntry}
+                  shownEntries={shownEntries}
+                  hideEducationEntry={hideEducationEntry}
+                  showEducationEntry={showEducationEntry}
+                />
+                <Skills
+                  formData ={formData}
+                  setFormData={setFormData}
+                  items={items}
+                  setItems={setItems}
                 />
           </div>          
         </div>            

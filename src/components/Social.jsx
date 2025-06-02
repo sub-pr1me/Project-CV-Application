@@ -2,13 +2,13 @@ import React from 'react'
 import { useState } from 'react'
 import styles from '../styles/Social.module.css'
 
-const Social = ({formData, setFormData, setItems}) => {
+const Social = ({formData, setFormData, items, setItems}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      setItems(formData);
+      setItems({...items, social: formData.social});
       setShowSubmit(!showSubmit);
       setShowEdit(!showEdit);
       e.target.firstChild.nextSibling.firstChild.firstChild.nextSibling.disabled = true;
@@ -38,11 +38,12 @@ const Social = ({formData, setFormData, setItems}) => {
                     type='text' 
                     id='linkedin'
                     autoComplete='false'
-                    required
-                    value={formData.linkedin}
+                    // required
+                    value={formData.social.linkedin}
                     onChange={(e) =>
-                        setFormData(
-                            {...formData, linkedin: e.target.value})
+                        setFormData(draft => {
+                            draft.social.linkedin = e.target.value;   
+                        })
                     }
                 />
             </div>
@@ -52,11 +53,12 @@ const Social = ({formData, setFormData, setItems}) => {
                     type='text' 
                     id='github'
                     autoComplete='false'
-                    required
-                    value={formData.github}
+                    // required
+                    value={formData.social.github}
                     onChange={(e) =>
-                        setFormData(
-                            {...formData, github: e.target.value})
+                        setFormData(draft => {
+                            draft.social.github = e.target.value;   
+                        })
                     }
                 />
             </div>
@@ -66,11 +68,12 @@ const Social = ({formData, setFormData, setItems}) => {
                     type='text' 
                     id='facebook'
                     autoComplete='false'
-                    required
-                    value={formData.facebook}
+                    // required
+                    value={formData.social.facebook}
                     onChange={(e) =>
-                        setFormData(
-                            {...formData, facebook: e.target.value})
+                        setFormData(draft => {
+                            draft.social.facebook = e.target.value;   
+                        })
                     }
                 />
             </div>
@@ -80,11 +83,12 @@ const Social = ({formData, setFormData, setItems}) => {
                     type='text' 
                     id='twitter'
                     autoComplete='false'
-                    required
-                    value={formData.twitter}
+                    // required
+                    value={formData.social.twitter}
                     onChange={(e) =>
-                        setFormData(
-                            {...formData, twitter: e.target.value})
+                        setFormData(draft => {
+                            draft.social.twitter = e.target.value;   
+                        })
                     }
                 />
             </div>
@@ -94,15 +98,16 @@ const Social = ({formData, setFormData, setItems}) => {
                     type='text' 
                     id='whatsapp'
                     autoComplete='false'
-                    required
-                    value={formData.whatsapp}
+                    // required
+                    value={formData.social.whatsapp}
                     onChange={(e) =>
-                        setFormData(
-                            {...formData, whatsapp: e.target.value})
+                        setFormData(draft => {
+                            draft.social.whatsapp = e.target.value;   
+                        })
                     }
                 />
             </div>
-        </div>        
+        </div>
         <button type='submit' className={showSubmit ? styles.shown : styles.hidden}>SUBMIT</button>
         <button type='button' className={showEdit ? styles.shown : styles.hidden} onClick={handleClick}>EDIT</button>
     </form>
