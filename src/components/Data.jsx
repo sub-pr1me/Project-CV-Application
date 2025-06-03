@@ -4,26 +4,22 @@ import General from './General.jsx'
 import Social from './Social.jsx'
 import Education from './Education.jsx'
 import Skills from './Skills.jsx'
+import SectionButton from './SectionButton.jsx'
 
-const Data = ({formData, setFormData, items, setItems, educationEntryCount,
-              addEducationEntry, shownEntries, hideEducationEntry, showEducationEntry}) => {
+const Data = ({items, setItems, formData, setFormData}) => {
   const [section, setSection] = useState('gen')
 
-  function switchSection(text) {
-    if (text === 'gen') {
-      console.log(text);
-      setSection(text);
-    } else if (text === 'soc') {
-      console.log(text);
-      setSection(text);
-    } else if (text === 'edu') {
-      console.log(text);
-      setSection(text);
-    } else if (text === 'ski') {
-      console.log(text);
-      setSection(text);
-    } else if (text === 'exp') {
-      console.log(text);
+  function switchSection(chosen) {
+    if (chosen === 'gen') {
+      setSection(chosen);
+    } else if (chosen === 'soc') {
+      setSection(chosen);
+    } else if (chosen === 'edu') {
+      setSection(chosen);
+    } else if (chosen === 'ski') {
+      setSection(chosen);
+    } else if (chosen === 'exp') {
+      console.log(chosen);
     };
   };
 
@@ -32,71 +28,66 @@ const Data = ({formData, setFormData, items, setItems, educationEntryCount,
         <div className={styles.app_name}>CV BUILDER v1.0</div>
           <div className={styles.data_wrapper}>
             <div className={styles.buttons}>
-              <div className={styles.btn_container} onClick={() => switchSection('gen')}>
-                <div className={styles.img_container}>
-                  <img src={'../icon/card-account-details.svg'} alt={'General info'} />
-                </div>
-                <div className={styles.text}>GENERAL INFO</div>
-              </div>
-              <div className={styles.btn_container} onClick={() => switchSection('soc')}>
-                <div className={styles.img_container}>
-                  <img src={'../icon/web.svg'} alt={'Social media'} />
-                </div>
-                <div className={styles.text}>SOCIAL MEDIA</div>
-              </div>
-              <div className={styles.btn_container} onClick={() => switchSection('edu')}>
-                <div className={styles.img_container}>
-                  <img src={'../icon/school.svg'} alt={'Education'} />
-                </div>
-                <div className={styles.text}>EDUCATION</div>
-              </div>
-              <div className={styles.btn_container} onClick={() => switchSection('ski')}>
-                <div className={styles.img_container}>
-                  <img src={'../icon/account-tie.svg'} alt={'Skills'} />
-                </div>
-                <div className={styles.text}>SKILLS</div>
-              </div>
-              <div className={styles.btn_container} onClick={() => switchSection('exp')}>
-                <div className={styles.img_container}>
-                  <img src={'../icon/briefcase-check.svg'} alt={'Experience'} />
-                </div>
-                <div className={styles.text}>EXPERIENCE</div>
-              </div>
+              <SectionButton
+                switchSection={switchSection}
+                id={'gen'}
+                src={'../icon/card-account-details.svg'}
+                text={'GENERAL INFO'}
+              />
+              <SectionButton
+                switchSection={switchSection}
+                id={'soc'}
+                src={'../icon/web.svg'}
+                text={'SOCIAL MEDIA'}
+              />
+              <SectionButton
+                switchSection={switchSection}
+                id={'edu'}
+                src={'../icon/school.svg'}
+                text={'EDUCATION'}
+              />
+              <SectionButton
+                switchSection={switchSection}
+                id={'ski'}
+                src={'../icon/account-tie.svg'}
+                text={'SKILLS'}
+              />
+              <SectionButton
+                switchSection={switchSection}
+                id={'exp'}
+                src={'../icon/briefcase-check.svg'}
+                text={'EXPERIENCE'}
+              />
             </div>
-            <div className={`${styles.sections_container} 
-            ${section === 'gen' ? styles.gen : null}
-            ${section === 'soc' ? styles.soc : null}
-            ${section === 'edu' ? styles.edu : null}
-            ${section === 'ski' ? styles.ski : null}`}>
+            <div className={`${styles.sections_container}
+                             ${section === 'gen' ? styles.gen : null}
+                             ${section === 'soc' ? styles.soc : null}
+                             ${section === 'edu' ? styles.edu : null}
+                             ${section === 'ski' ? styles.ski : null}`}>
               <div className={`${styles.section_wrapper} ${styles.general}`}></div>
                 <General
-                  formData ={formData}
-                  setFormData={setFormData}
                   items={items}
                   setItems={setItems}
+                  formData ={formData}
+                  setFormData={setFormData}
                 />
                 <Social
-                  formData ={formData}
-                  setFormData={setFormData}
                   items={items}
                   setItems={setItems}
+                  formData ={formData}
+                  setFormData={setFormData}
                 />
                 <Education
-                  formData ={formData}
-                  setFormData={setFormData}
                   items={items}
                   setItems={setItems}
-                  educationEntryCount={educationEntryCount}
-                  addEducationEntry={addEducationEntry}
-                  shownEntries={shownEntries}
-                  hideEducationEntry={hideEducationEntry}
-                  showEducationEntry={showEducationEntry}
+                  formData ={formData}
+                  setFormData={setFormData}
                 />
                 <Skills
-                  formData ={formData}
-                  setFormData={setFormData}
                   items={items}
                   setItems={setItems}
+                  formData ={formData}
+                  setFormData={setFormData}
                 />
           </div>          
         </div>            
