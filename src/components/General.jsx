@@ -11,25 +11,11 @@ const General = ({formData, setFormData, items, setItems}) => {
       setItems({...items, general: formData.general});
       setShowSubmit(!showSubmit);
       setShowEdit(!showEdit);
-      e.target.firstChild.nextSibling.firstChild.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
     };
   
-    const handleClick = (e) => {
+    const handleEdit = () => {
       setShowSubmit(!showSubmit);
       setShowEdit(!showEdit);
-      e.target.previousSibling.previousSibling.firstChild.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
     };
 
   return (
@@ -42,7 +28,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                     type='text' 
                     id='firstname'
                     autoComplete='false'
-                    required
+                    // required
                     value={formData.general.firstname}
                     onChange={(e) =>
                         setFormData(draft => {
@@ -57,7 +43,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                     type='text' 
                     id='lastname'
                     autoComplete='false'
-                    required
+                    // required
                     value={formData.general.lastname}
                     onChange={(e) =>
                         setFormData(draft => {
@@ -72,7 +58,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                     type='text' 
                     id='profession'
                     autoComplete='false'
-                    required
+                    // required
                     value={formData.general.profession}
                     onChange={(e) =>
                         setFormData(draft => {
@@ -87,7 +73,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                     type='text' 
                     id='location'
                     autoComplete='false'
-                    required
+                    // required
                     value={formData.general.location}
                     onChange={(e) =>
                         setFormData(draft => {
@@ -102,7 +88,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                     type='tel' 
                     id='phone'
                     autoComplete='false'
-                    required
+                    // required
                     value={formData.general.phone}
                     onChange={(e) =>
                         setFormData(draft => {
@@ -117,7 +103,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                     type='email' 
                     id='email'
                     autoComplete='false'
-                    required
+                    // required
                     value={formData.general.email}
                     onChange={(e) =>
                         setFormData(draft => {
@@ -132,7 +118,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                     type='text' 
                     id='summary'
                     autoComplete='false'
-                    required
+                    // required
                     value={formData.general.summary}
                     onChange={(e) =>
                         setFormData(draft => {
@@ -157,7 +143,7 @@ const General = ({formData, setFormData, items, setItems}) => {
             </div>
         </div>        
         <button type='submit' className={showSubmit ? styles.shown : styles.hidden}>SUBMIT</button>
-        <button type='button' className={showEdit ? styles.shown : styles.hidden} onClick={handleClick}>EDIT</button>
+        <button type='button' className={showEdit ? styles.shown : styles.hidden} onClick={handleEdit}>EDIT</button>
     </form>
   )
 }

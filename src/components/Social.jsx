@@ -1,115 +1,101 @@
 import React from 'react'
-import { useState } from 'react'
 import styles from '../styles/Social.module.css'
+import { useState } from 'react'
+import { useImmer } from 'use-immer';
+import InputSocial from './InputSocial';
 
 const Social = ({formData, setFormData, items, setItems}) => {
     const [showSubmit, setShowSubmit] = useState(true);
-    const [showEdit, setShowEdit] = useState(false);
+    const [fields, setFields] = useImmer(
+        [
+            {
+                key: crypto.randomUUID(),
+                id: 'linkedin',
+                alt: 'Linked In',
+                src: '../../icon/linkedin-plain.svg',
+                value: formData.social.linkedin,
+                onChange: (e) => {setFormData(draft => {draft.social.linkedin = e.target.value})}
+            },
+            {
+                key: crypto.randomUUID(),
+                id: 'github',
+                alt: 'Github',
+                src: '../../icon/github-original.svg',
+                value: formData.social.github,
+                onChange: (e) => {setFormData(draft => {draft.social.github = e.target.value})}
+            },
+            {
+                key: crypto.randomUUID(),
+                id: 'facebook',
+                alt: 'Facebook',
+                src: '../../icon/facebook.svg',
+                value: formData.social.facebook,
+                onChange: (e) => {setFormData(draft => {draft.social.facebook = e.target.value})}
+            },
+            {
+                key: crypto.randomUUID(),
+                id: 'twitter',
+                alt: 'Twitter',
+                src: '../../icon/twitter-original.svg',
+                value: formData.social.twitter,
+                onChange: (e) => {setFormData(draft => {draft.social.twitter = e.target.value})}
+            },
+            {
+                key: crypto.randomUUID(),
+                id: 'whatsapp',
+                alt: 'WhatsApp',
+                src: '../../icon/whatsapp.svg',
+                value: formData.social.whatsapp,
+                onChange: (e) => {setFormData(draft => {draft.social.whatsapp = e.target.value})}
+            }
+        ]
+    );
+    const [isDisabled, setIsDisabled] = useState(false);
   
     const handleSubmit = (e) => {
       e.preventDefault();
       setItems({...items, social: formData.social});
       setShowSubmit(!showSubmit);
-      setShowEdit(!showEdit);
-      e.target.firstChild.nextSibling.firstChild.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
-      e.target.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = true;
+      setIsDisabled(!isDisabled);
     };
   
-    const handleClick = (e) => {
+    const handleEdit = () => {
       setShowSubmit(!showSubmit);
-      setShowEdit(!showEdit);
-      e.target.previousSibling.previousSibling.firstChild.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
-      e.target.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.disabled = false;
+      setIsDisabled(!isDisabled);
     };
 
   return (
     <form className={styles.social_container} onSubmit={handleSubmit}>
         <div className={styles.title}>Add social networks links:</div>
         <div className={styles.input_container}>
-            <div className={styles.input_wrapper}>
-                <label htmlFor='linkedin'><img src="../../icon/linkedin-plain.svg" alt="Linked In" /></label>
-                <input
-                    type='text' 
-                    id='linkedin'
-                    autoComplete='false'
-                    // required
-                    value={formData.social.linkedin}
-                    onChange={(e) =>
-                        setFormData(draft => {
-                            draft.social.linkedin = e.target.value;   
-                        })
-                    }
-                />
-            </div>
-            <div className={styles.input_wrapper}>
-                <label htmlFor='github'><img src="../../icon/github-original.svg" alt="Github" /></label>
-                <input
-                    type='text' 
-                    id='github'
-                    autoComplete='false'
-                    // required
-                    value={formData.social.github}
-                    onChange={(e) =>
-                        setFormData(draft => {
-                            draft.social.github = e.target.value;   
-                        })
-                    }
-                />
-            </div>
-            <div className={styles.input_wrapper}>
-                <label htmlFor='facebook'><img src="../../icon/facebook.svg" alt="Facebook" /></label>
-                <input
-                    type='text' 
-                    id='facebook'
-                    autoComplete='false'
-                    // required
-                    value={formData.social.facebook}
-                    onChange={(e) =>
-                        setFormData(draft => {
-                            draft.social.facebook = e.target.value;   
-                        })
-                    }
-                />
-            </div>
-            <div className={styles.input_wrapper}>
-                <label htmlFor='twitter'><img src="../../icon/twitter-original.svg" alt="Twitter" /></label>
-                <input
-                    type='text' 
-                    id='twitter'
-                    autoComplete='false'
-                    // required
-                    value={formData.social.twitter}
-                    onChange={(e) =>
-                        setFormData(draft => {
-                            draft.social.twitter = e.target.value;   
-                        })
-                    }
-                />
-            </div>
-            <div className={styles.input_wrapper}>
-                <label htmlFor='whatsapp'><img src="../../icon/whatsapp.svg" alt="WhatsApp" /></label>
-                <input
-                    type='text' 
-                    id='whatsapp'
-                    autoComplete='false'
-                    // required
-                    value={formData.social.whatsapp}
-                    onChange={(e) =>
-                        setFormData(draft => {
-                            draft.social.whatsapp = e.target.value;   
-                        })
-                    }
-                />
-            </div>
+            {fields.map((field) => {
+                    return (
+                        <InputSocial
+                            key={field.key}
+                            id={field.id}
+                            alt={field.alt}
+                            src={field.src}
+                            defaultValue={field.value}
+                            onChange={field.onChange}
+                            isDisabled={isDisabled}
+                        />
+                    )
+                })
+            }
         </div>
-        <button type='submit' className={showSubmit ? styles.shown : styles.hidden}>SUBMIT</button>
-        <button type='button' className={showEdit ? styles.shown : styles.hidden} onClick={handleClick}>EDIT</button>
+        <button
+            id='sub'
+            type='submit'
+            className={`${styles.edu_submit} ${!showSubmit ? styles.hidden : null}`}
+            >SUBMIT
+        </button>
+        <button
+            id='ed'
+            type='button'
+            className={showSubmit ? styles.hidden : null}
+            onClick={handleEdit}
+            >EDIT
+        </button>
     </form>
   )
 }

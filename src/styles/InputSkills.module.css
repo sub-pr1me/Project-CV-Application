@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'geologica';
+    src: url(../../font/Geologica/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'lubrifont';
+    src: url(../../font/WDXL_Lubrifont_TC/WDXLLubrifontTC-Regular.ttf);
+}
+
+
+.input_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+label {
+    font-family: 'lubrifont';
+    color: white;
+    font-size: 20px;
+}
+
+input {
+    font-family: 'geologica';
+    font-weight: 300;
+    border: none;
+}
