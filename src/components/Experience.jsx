@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import { useImmer } from "use-immer"
-import styles from '../styles/Education.module.css'
-import EducationEntry from '../components/EducationEntry.jsx'
+import styles from '../styles/Experience.module.css'
+import ExperienceEntry from '../components/ExperienceEntry.jsx'
 
-const Education = ({formData, setFormData, items, setItems}) => {
+const Experience = ({formData, setFormData, items, setItems}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
     const [entries, setEntries] = useImmer([{index: 1, key: crypto.randomUUID()}]);
@@ -13,12 +13,12 @@ const Education = ({formData, setFormData, items, setItems}) => {
     function addEntry() {
         let num = entries.length+1;
         setEntries((draft) => {draft.push({index: num, key: crypto.randomUUID()})});
-        setFormData((draft) => {draft.education.push({year: '', location: '', degree: '', institution: ''})});
+        setFormData((draft) => {draft.experience.push({period: '', location: '', company: '', position: '', responsibilities: ['']})});
     };
 
     function removeEntry(index) {
         setFormData((draft) => {
-            draft.education.splice(index-1,1);
+            draft.experience.splice(index-1,1);
         });
         setEntries((draft) => {
             draft.splice(index-1, 1);
@@ -28,7 +28,7 @@ const Education = ({formData, setFormData, items, setItems}) => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      setItems({...items, education: formData.education});
+      setItems({...items, experience: formData.experience});
       setShowSubmit(!showSubmit);
       setShowEdit(!showEdit);
       setIsDisabled(!isDisabled);
@@ -41,12 +41,12 @@ const Education = ({formData, setFormData, items, setItems}) => {
     };
 
   return (
-    <form className={styles.education_container} onSubmit={handleSubmit}>
-        <div className={styles.title}>Add education info:</div>
+    <form className={styles.experience_container} onSubmit={handleSubmit}>
+        <div className={styles.title}>Add work experience info:</div>
         <div className={styles.input_container}>
             {entries.map((entry) => {
                 return (
-                    <EducationEntry
+                    <ExperienceEntry
                         formData={formData}
                         setFormData={setFormData}
                         removeEntry={removeEntry}
@@ -59,7 +59,7 @@ const Education = ({formData, setFormData, items, setItems}) => {
         </div>
         <button 
             type='button'
-            className={`${styles.add_entry} ${entries.length > 3 ? styles.hidden : null}`}
+            className={`${styles.add_entry} ${entries.length > 2 ? styles.hidden : null}`}
             onClick={addEntry}
             disabled={isDisabled}
             >+Add Entry
@@ -81,4 +81,4 @@ const Education = ({formData, setFormData, items, setItems}) => {
   )
 }
 
-export default Education
+export default Experience

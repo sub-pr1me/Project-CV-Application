@@ -47,22 +47,27 @@
 }
 
 .gen {
-    transform: translateX(37.47%);
+    transform: translateX(40%);
     transition: all 0.2s ease-in;
 }
 
 .soc {
-    transform: translateX(12.48%);
+    transform: translateX(20%);
     transition: all 0.2s ease-in;
 }
 
 .edu {
-    transform: translateX(-12.52%);
+    transform: translateX(0%);
     transition: all 0.2s ease-in;
 }
 
 .ski {
-    transform: translateX(-37.55%);
+    transform: translateX(-20%);
+    transition: all 0.2s ease-in;
+}
+
+.exp {
+    transform: translateX(-40%);
     transition: all 0.2s ease-in;
 }
 

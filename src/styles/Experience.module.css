@@ -17,56 +17,51 @@
     outline: 1px solid greenyellow;
 } */
 
-.general_container {
+.experience_container {
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    overflow-x: clip;
-}
-
-.title{
-    font-family: 'lubrifont';
-    color: white;
+    justify-content: flex-start;
+    padding-bottom: 50px;
 }
 
 .title {
+    font-family: 'lubrifont';
+    color: white;
     font-size: 30px;
     margin-bottom: 10px;
-}
-
-.input_wrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .input_container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;
-    align-self: center;
-    width: 270px;
+    align-items: center;
+    gap: 15px;
+    width: 287px;
+    height: fit-content;
 }
 
-textarea {
-    resize: none;
-    width: 178px;
-    height: 60px;
-    margin: 0px;
-    padding: 0px;
+.experience_container input {
+    font-family: 'geologica';
+    font-weight: 300;
+    border: none;
 }
 
-button {
+.experience_container button {
     font-family: 'jura';
     font-weight: 900;
     font-size: 20px;
 }
 
-.gen_sub {
-    margin-top: -10px;
+.experience_container .add_entry {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+button[id="sub"],
+button[id="ed"] {
+    margin-top: 35px;
 }
 
 .shown {
@@ -75,4 +70,8 @@ button {
 
 .hidden {
     display: none;
+}
+
+.shownFlex {
+    display: flex;
 }

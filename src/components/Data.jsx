@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import styles from '../styles/Data.module.css'
+
+import SectionButton from './SectionButton.jsx'
 import General from './General.jsx'
 import Social from './Social.jsx'
 import Education from './Education.jsx'
 import Skills from './Skills.jsx'
-import SectionButton from './SectionButton.jsx'
+import Experience from './Experience.jsx'
 
 const Data = ({items, setItems, formData, setFormData}) => {
   const [section, setSection] = useState('gen')
@@ -19,7 +21,7 @@ const Data = ({items, setItems, formData, setFormData}) => {
     } else if (chosen === 'ski') {
       setSection(chosen);
     } else if (chosen === 'exp') {
-      console.log(chosen);
+      setSection(chosen);
     };
   };
 
@@ -63,7 +65,8 @@ const Data = ({items, setItems, formData, setFormData}) => {
                              ${section === 'gen' ? styles.gen : null}
                              ${section === 'soc' ? styles.soc : null}
                              ${section === 'edu' ? styles.edu : null}
-                             ${section === 'ski' ? styles.ski : null}`}>
+                             ${section === 'ski' ? styles.ski : null}
+                             ${section === 'exp' ? styles.exp : null}`}>
               <div className={`${styles.section_wrapper} ${styles.general}`}></div>
                 <General
                   items={items}
@@ -84,6 +87,12 @@ const Data = ({items, setItems, formData, setFormData}) => {
                   setFormData={setFormData}
                 />
                 <Skills
+                  items={items}
+                  setItems={setItems}
+                  formData ={formData}
+                  setFormData={setFormData}
+                />
+                <Experience
                   items={items}
                   setItems={setItems}
                   formData ={formData}

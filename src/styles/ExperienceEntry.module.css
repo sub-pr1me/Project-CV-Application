@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'geologica';
+    src: url(../../font/Geologica/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'jura';
+    src: url(../../font/Jura/Jura-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'lubrifont';
+    src: url(../../font/WDXL_Lubrifont_TC/WDXLLubrifontTC-Regular.ttf);
+}
+
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px white solid;
+    width: 100%;
+}
+
+.entry_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: 'lubrifont';
+    color: white;
+}
+
+.entry_title .remove_btn {
+    font-size: 15px;
+    margin: 0px;
+}
+
+.field_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    width: 100%;  
+}
+
+label,
+.resp {
+    font-family: 'lubrifont';
+    color: white;
+    font-size: 20px;
+}
+
+.field_wrapper:nth-child(6) {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field_wrapper:nth-child(6) label {
+    align-self: center;
+}
+
+.resp_btns {
+    display: flex;
+    gap: 15px;
+}
+
+.resp_rem,
+.resp_add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    font-size: 20px;
+    padding: 0px 5px;
+    margin: 10px 0px;
+}
+
+.hidden {
+    display: none;
+}

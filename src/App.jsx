@@ -30,7 +30,21 @@ function App() {
           institution: 'University Of Autism'
         }
       ],
-      skills: ['Web development', 'Networking', 'Grilling burgers', '', '', '']
+      skills: ['Web development', 'Networking', 'Grilling burgers', '', '', ''],
+      experience: [
+        {
+          period: '2024-2025',
+          location: 'NY-USA',
+          company: 'Autism International Inc',
+          position: 'Chief silliness officer',
+          responsibilities: [
+            'Water cooler support',
+            'Cookie jar refilling',
+            'Watering plants',
+            'Telling weird jokes'
+          ]
+        }
+      ]
     }
   );
   const [formData, setFormData] = useImmer(
@@ -60,7 +74,16 @@ function App() {
           institution: ''
         }
       ],
-      skills: ['', '', '', '', '', '']
+      skills: ['', '', '', '', '', ''],
+      experience: [
+        {
+          period: '',
+          location: '',
+          company: '',
+          position: '',
+          responsibilities: ['']
+        }
+      ]
     }
   );
 
