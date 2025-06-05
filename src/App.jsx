@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useImmer } from "use-immer"
-import './styles/App.css'
 import Data from './components/Data.jsx'
 
 function App() {
