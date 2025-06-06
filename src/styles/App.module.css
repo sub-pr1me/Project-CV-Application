@@ -1,79 +1,9 @@
-@font-face {
-    font-family: 'geologica';
-    src: url(../../font/Geologica/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
-}
 
-@font-face {
-    font-family: 'jura';
-    src: url(../../font/Jura/Jura-VariableFont_wght.ttf);
-}
-
-/* .data_container * {
+/* * {
     outline: 1px solid greenyellow;
 } */
 
-.data_container,
-.buttons {
-    display: flex;
-    overflow-x: clip;
-}
-
-.data_container {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100vw;
-    gap: 20px;
-}
-
-.app_name {
-    font-family: 'jura';
-    font-size: clamp(15px, 3.5vw, 3.5vw);
-    font-weight: 900;
-    text-align: center;
-    color: white;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.data_wrapper {
+.app_content {
     display: flex;
     flex-direction: column;
-}
-
-.sections_container {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.gen {
-    transform: translateX(37.47%);
-    transition: all 0.2s ease-in;
-}
-
-.soc {
-    transform: translateX(12.48%);
-    transition: all 0.2s ease-in;
-}
-
-.edu {
-    transform: translateX(-12.52%);
-    transition: all 0.2s ease-in;
-}
-
-.ski {
-    transform: translateX(-37.55%);
-    transition: all 0.2s ease-in;
-}
-
-.section_wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.buttons {
-    font-family: 'geologica';
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
 }

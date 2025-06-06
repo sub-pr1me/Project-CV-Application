@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useImmer } from "use-immer"
+import styles from './styles/App.module.css'
 import Data from './components/Data.jsx'
+import Mockup from './components/Mockup.jsx'
 
 function App() {
   const [items, setItems] = useState(
@@ -88,14 +90,15 @@ function App() {
   );
 
   return (
-    <>
+    <div className={styles.app_content}>
       <Data
         items={items}
         setItems={setItems}
         formData ={formData}
         setFormData={setFormData}
       />
-    </>
+      <Mockup />
+    </div>
   )
 }
 

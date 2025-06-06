@@ -15,7 +15,6 @@
 .data_container,
 .buttons {
     display: flex;
-    overflow-x: clip;
 }
 
 .data_container {
@@ -24,6 +23,8 @@
     align-items: center;
     width: 100vw;
     gap: 20px;
+    padding-bottom: 50px;
+    overflow-x: clip;
 }
 
 .app_name {

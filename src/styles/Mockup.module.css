@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'geologica';
+    src: url(../../font/Geologica/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'jura';
+    src: url(../../font/Jura/Jura-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'lubrifont';
+    src: url(../../font/WDXL_Lubrifont_TC/WDXLLubrifontTC-Regular.ttf);
+}
+
+/* * {
+    outline: 1px solid rgb(30, 141, 135);
+} */
+
+.mockup,
+.top,
+.header,
+.left,
+.center,
+.center img,
+.right,
+.location,
+.phone,
+.email,
+.location_data,
+.phone_data,
+.email_data,
+.summary,
+.bottom,
+.bottom_left,
+.bottom_right,
+.soc_content,
+.ski_content,
+.edu_content,
+.exp_content,
+.soc_content div,
+.ski_content div,
+.edu_content div,
+.exp_content div {
+    display: flex;
+}
+
+.mockup,
+.top,
+.left,
+.right,
+.summary,
+.bottom_left,
+.bottom_right,
+.soc_content,
+.ski_content,
+.edu_content,
+.exp_content {
+    flex-direction: column;
+}
+
+.firstname,
+.lastname {
+    font-size: 18px;
+}
+
+.profession,
+.summary .title {
+    font-size: 9px;
+    padding-bottom: 1vw;
+}
+
+.location,
+.phone,
+.email {
+    gap: 2vw;
+    align-items: center;
+    justify-self: center;
+}
+
+.location_data,
+.phone_data,
+.email_data {
+    gap: 1vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 10px;
+    text-align: start;
+}
+
+.mockup {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    aspect-ratio: 1.41/1;
+    padding-top: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.mockup div {
+    box-sizing: border-box;
+}
+
+.top {
+    width: 100%;
+    height: 25%;
+    justify-content: center;
+}
+
+.header {
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20vw;
+    margin: 4vw 2vw 2vw;
+    padding: 0px 2%;
+    background-color: rgb(94, 52, 133);
+    color: white;
+}
+
+.left {
+    gap: 5px;
+    min-width: 33%;
+    max-width: 42%;
+}
+
+.center {
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    margin-left: 4.5%;
+    margin-right: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.center img {
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(115%);
+}
+
+.right {
+    height: 100%;
+    min-width: 24%;
+    max-width: 33%;
+    gap: 10px;
+    justify-content: center;
+}
+
+.right img {
+    filter: invert(100%);
+    width: 3vw;
+}
+
+.summary {
+    gap: 1vw;
+    margin: 2vw 2vw 0px;
+}
+
+.summary_content {
+    font-size: 10px;
+}
+
+.bottom {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-top: 6%;
+
+}
+
+.bottom_left,
+.bottom_right {
+    width: 50vw;
+    padding: 0px 2vw;
+}
+
+.bottom .title {
+    font-size: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1%;
+}
+
+.bottom_left {
+    gap: 2%;
+}
+
+.bottom_right {
+    border-left: 1px solid rgb(47, 111, 196);
+}
+
+.social,
+.skills {
+    height: 25%;
+}
+
+.education {
+    height: 46%;
+}
+
+.experience {
+    height: 100%;
+}
+
+.social .title,
+.skills .title {
+    height: 15%;
+}
+
+.education .title {
+    height: 8%;
+}
+
+.experience .title {
+    height: 3.6%;
+}
+
+.soc_content,
+.ski_content {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 85%;
+}
+
+.edu_content {
+    justify-content: space-evenly;
+    height: 92%;
+}
+
+.exp_content {
+    justify-content: space-evenly;
+    height: 96.4%;
+}
+
+.soc_content div,
+.ski_content div {
+    justify-content: flex-start;
+    align-items: center;
+    width: 45%;
+    height: 26%;
+    margin-bottom: 3%;
+}
+
+.edu_content div {
+    justify-content: flex-start;
+    align-items: center;
+    height: 20%;
+}
+
+.exp_content div {
+    justify-content: flex-start;
+    align-items: center;
+    height: 30%;
+}
+
+.title {
+    border-bottom: 1px solid rgb(47, 111, 196);
+    width: fit-content;
+    padding-right: 10px;
+}
