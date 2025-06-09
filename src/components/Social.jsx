@@ -13,40 +13,40 @@ const Social = ({formData, setFormData, items, setItems}) => {
                 id: 'linkedin',
                 alt: 'Linked In',
                 src: '../../icon/linkedin-plain.svg',
-                value: formData.social.linkedin,
-                onChange: (e) => {setFormData(draft => {draft.social.linkedin = e.target.value})}
+                value: formData.social[0][2],
+                onChange: (e) => {setFormData(draft => {draft.social[0][2] = e.target.value})}
             },
             {
                 key: crypto.randomUUID(),
                 id: 'github',
                 alt: 'Github',
                 src: '../../icon/github-original.svg',
-                value: formData.social.github,
-                onChange: (e) => {setFormData(draft => {draft.social.github = e.target.value})}
+                value: formData.social[1][2],
+                onChange: (e) => {setFormData(draft => {draft.social[1][2] = e.target.value})}
             },
             {
                 key: crypto.randomUUID(),
                 id: 'facebook',
                 alt: 'Facebook',
                 src: '../../icon/facebook.svg',
-                value: formData.social.facebook,
-                onChange: (e) => {setFormData(draft => {draft.social.facebook = e.target.value})}
+                value: formData.social[2][2],
+                onChange: (e) => {setFormData(draft => {draft.social[2][2] = e.target.value})}
             },
             {
                 key: crypto.randomUUID(),
                 id: 'twitter',
                 alt: 'Twitter',
                 src: '../../icon/twitter-original.svg',
-                value: formData.social.twitter,
-                onChange: (e) => {setFormData(draft => {draft.social.twitter = e.target.value})}
+                value: formData.social[3][2],
+                onChange: (e) => {setFormData(draft => {draft.social[3][2] = e.target.value})}
             },
             {
                 key: crypto.randomUUID(),
                 id: 'whatsapp',
                 alt: 'WhatsApp',
                 src: '../../icon/whatsapp.svg',
-                value: formData.social.whatsapp,
-                onChange: (e) => {setFormData(draft => {draft.social.whatsapp = e.target.value})}
+                value: formData.social[4][2],
+                onChange: (e) => {setFormData(draft => {draft.social[4][2] = e.target.value})}
             }
         ]
     );

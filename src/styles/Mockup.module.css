@@ -14,35 +14,17 @@
 }
 
 /* * {
-    outline: 1px solid rgb(30, 141, 135);
+    outline: 1px solid rgb(39, 164, 236);
 } */
 
-.mockup,
-.top,
-.header,
-.left,
-.center,
-.center img,
-.right,
-.location,
-.phone,
-.email,
-.location_data,
-.phone_data,
-.email_data,
-.summary,
-.bottom,
-.bottom_left,
-.bottom_right,
-.soc_content,
-.ski_content,
-.edu_content,
-.exp_content,
-.soc_content div,
-.ski_content div,
-.edu_content div,
-.exp_content div {
+.mockup * {
     display: flex;
+    box-sizing: border-box;
+}
+
+.mockup ul {
+    display: block;
+    line-height: 3vw;
 }
 
 .mockup,
@@ -52,102 +34,108 @@
 .summary,
 .bottom_left,
 .bottom_right,
+.social,
+.skills,
+.education,
+.experience,
 .soc_content,
 .ski_content,
 .edu_content,
-.exp_content {
+.exp_content,
+.edu_left,
+.edu_right,
+.exp_left,
+.exp_right {
     flex-direction: column;
 }
 
 .firstname,
 .lastname {
-    font-size: 18px;
+    font-size: 5vw;
 }
 
 .profession,
 .summary .title {
-    font-size: 9px;
-    padding-bottom: 1vw;
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.profession {
+    letter-spacing: 0.2vw;
+}
+
+.summary_content {
+    font-size: 2vw;
+    line-height: 3vw;
+    font-family: 'geologica';
+    font-weight: 300;
 }
 
 .location,
 .phone,
 .email {
-    gap: 2vw;
     align-items: center;
-    justify-self: center;
+    justify-self: flex-start;
+    gap: 1vw;
 }
 
 .location_data,
 .phone_data,
 .email_data {
-    gap: 1vw;
     align-items: flex-start;
     justify-content: flex-start;
-    font-size: 10px;
+    font-size: 2vw;
     text-align: start;
 }
 
 .mockup {
-    background-color: rgb(255, 255, 255);
-    width: 100vw;
-    aspect-ratio: 1.41/1;
-    padding-top: 30px;
-    color: rgb(0, 0, 0);
-}
-
-.mockup div {
     box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    aspect-ratio: 1/1.411124547;
 }
 
 .top {
-    width: 100%;
-    height: 25%;
-    justify-content: center;
+    height: 50vw;
+    padding: 2vw;
 }
 
 .header {
-    box-sizing: border-box;
-    justify-content: flex-start;
-    align-items: center;
-    height: 20vw;
-    margin: 4vw 2vw 2vw;
-    padding: 0px 2%;
     background-color: rgb(94, 52, 133);
     color: white;
+    justify-content: flex-start;
+    align-items: center;
+    height: 45%;
+    margin-top: 5%;
+    font-family: 'lubrifont';
 }
 
 .left {
-    gap: 5px;
-    min-width: 33%;
-    max-width: 42%;
+    height: 100%;
+    justify-content: center;
+    gap: 5%;
+    margin-left: 3vw;
+    min-width: 33.3333%;
+    width: fit-content;
 }
 
 .center {
-    width: 25%;
-    aspect-ratio: 1 / 1;
-    margin-left: 4.5%;
-    margin-right: 10%;
-    justify-content: center;
-    align-items: center;
+    margin-right: 7vw;
 }
 
 .center img {
     text-align: center;
-    border: 2px solid white;
+    border: 0.5vw solid white;
     border-radius: 50%;
-    height: 100%;
-    width: 100%;
+    height: 27vw;
+    aspect-ratio: 1/1;
     object-fit: cover;
-    transform: scale(115%);
 }
 
 .right {
     height: 100%;
-    min-width: 24%;
-    max-width: 33%;
-    gap: 10px;
     justify-content: center;
+    gap: 1vw;
+    margin-right: 1vw;
 }
 
 .right img {
@@ -155,50 +143,39 @@
     width: 3vw;
 }
 
-.summary {
-    gap: 1vw;
-    margin: 2vw 2vw 0px;
-}
-
-.summary_content {
-    font-size: 10px;
+.summary .title {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+    border-bottom: 0.4vw solid rgb(106, 106, 255);
+    width: fit-content;
+    padding-right: 4vw;
+    font-family: 'geologica';
 }
 
 .bottom {
-    width: 100%;
-    aspect-ratio: 1/1;
-    margin-top: 6%;
-
+    height: 120vw;
+    padding: 2vw 2vw 4vw;
 }
 
 .bottom_left,
 .bottom_right {
-    width: 50vw;
-    padding: 0px 2vw;
-}
-
-.bottom .title {
-    font-size: 10px;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 1%;
-}
-
-.bottom_left {
-    gap: 2%;
+    width: 50%;
 }
 
 .bottom_right {
-    border-left: 1px solid rgb(47, 111, 196);
+    padding-left: 2vw;
+    border-left: 0.4vw solid rgb(106, 106, 255);
 }
 
 .social,
 .skills {
-    height: 25%;
+    height: 30%;
+
 }
 
 .education {
-    height: 46%;
+    height: 40%;
 }
 
 .experience {
@@ -206,58 +183,123 @@
 }
 
 .social .title,
-.skills .title {
-    height: 15%;
-}
-
-.education .title {
-    height: 8%;
-}
-
+.skills .title,
+.education .title,
 .experience .title {
-    height: 3.6%;
+    font-size: 2.8vw;
+    padding-bottom: 1%;
+    border-bottom: 0.4vw solid rgb(106, 106, 255);
+    width: fit-content;
+    padding-right: 4vw;
+    font-family: 'geologica';
+    font-weight: 600;
 }
 
 .soc_content,
 .ski_content {
-    justify-content: flex-start;
+    height: 87%;
+    max-height: 87%;
+    flex-flow: column;
     flex-wrap: wrap;
-    height: 85%;
+    padding-top: 1vw;
+    font-weight: 300;
 }
 
 .edu_content {
-    justify-content: space-evenly;
-    height: 92%;
+    height: 100%;
+    font-size: 2.2vw;
+    gap: 5vw;
+    padding-top: 2vw;
+    font-weight: 300;
+    color: rgb(97, 97, 97);
 }
 
-.exp_content {
-    justify-content: space-evenly;
-    height: 96.4%;
+.edu_item {
+    gap: 3vw;
 }
 
 .soc_content div,
 .ski_content div {
-    justify-content: flex-start;
+    height: 24%;
+    width: 50%;
+    margin-bottom: 2%;
     align-items: center;
-    width: 45%;
-    height: 26%;
-    margin-bottom: 3%;
 }
 
-.edu_content div {
-    justify-content: flex-start;
-    align-items: center;
-    height: 20%;
+.edu_item .bold_italic {
+    font-style: italic;
+    font-weight: 600;
+    color: black;
 }
 
-.exp_content div {
-    justify-content: flex-start;
-    align-items: center;
-    height: 30%;
+.soc_item,
+.ski_item {
+   gap: 1vw;
+   align-items: center;
+   margin-top: 0.7vw;
 }
 
-.title {
-    border-bottom: 1px solid rgb(47, 111, 196);
+.soc_img,
+.ski_img {
+    aspect-ratio: 1/1;
+    width: 3vw;
+    filter: invert(33%);
+}
+
+.soc_item .soc_link {
+    margin: 0px;
+    font-size: 2.2vw;
     width: fit-content;
-    padding-right: 10px;
+    height: fit-content;
+    transform: translateY(15%);
+}
+
+.ski_content .ski_item {
+    font-size: 2.2vw;
+    line-height: 3.5vw;
+}
+
+.soc_content,
+.ski_content,
+.edu_content,
+.exp_content {
+    font-family: 'geologica';
+}
+
+.edu_left,
+.edu_right {
+    gap: 1vw;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.exp_content {
+    height: 100%;
+    font-size: 2.2vw;
+    font-weight: 300;
+    color: rgb(97, 97, 97);
+}
+
+.exp_item {
+    height: fit-content;
+    padding: 3vw 2vw;
+    gap: 3vw;
+}
+
+.exp_left,
+.exp_right {
+    gap: 1vw;
+}
+
+.exp_left {
+    text-wrap: nowrap;
+}
+
+.exp_right div:nth-child(1) {
+    color: black;
+    font-weight: 600;
+}
+
+li {
+    color: black;
 }

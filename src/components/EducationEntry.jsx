@@ -23,7 +23,7 @@ const EducationEntry = ({formData, setFormData, removeEntry, index, isDisabled})
                 autoComplete='false'
                 // required
                 defaultValue={formData.education[index-1].year}
-                onChange={(e) => {setFormData((draft) => {draft.education[index-1].year = e.target.value})}}
+                onChange={(e) => {setFormData((draft) => {draft.education[index-1][0] = e.target.value})}}
                 disabled={isDisabled}
             />
         </div>
@@ -35,7 +35,7 @@ const EducationEntry = ({formData, setFormData, removeEntry, index, isDisabled})
                 autoComplete='false'
                 // required
                 defaultValue={formData.education[index-1].location}
-                onChange={(e) => {setFormData((draft) => {draft.education[index-1].location = e.target.value})}}
+                onChange={(e) => {setFormData((draft) => {draft.education[index-1][1] = e.target.value})}}
                 disabled={isDisabled}
             />
         </div>
@@ -47,7 +47,7 @@ const EducationEntry = ({formData, setFormData, removeEntry, index, isDisabled})
                 autoComplete='false'
                 // required
                 defaultValue={formData.education[index-1].degree}
-                onChange={(e) => {setFormData((draft) => {draft.education[index-1].degree = e.target.value})}}
+                onChange={(e) => {setFormData((draft) => {draft.education[index-1][2] = e.target.value})}}
                 disabled={isDisabled}
             />
         </div>
@@ -59,7 +59,7 @@ const EducationEntry = ({formData, setFormData, removeEntry, index, isDisabled})
                 autoComplete='false'
                 // required
                 defaultValue={formData.education[index-1].institution}
-                onChange={(e) => {setFormData((draft) => {draft.education[index-1].institution = e.target.value})}}
+                onChange={(e) => {setFormData((draft) => {draft.education[index-1][3] = e.target.value})}}
                 disabled={isDisabled}
             />
         </div>

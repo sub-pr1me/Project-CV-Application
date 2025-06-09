@@ -9,7 +9,7 @@ const ExperienceEntry = ({formData, setFormData, removeEntry, index, isDisabled}
     function addResp() {
         if (resps.length <= 3 ) {
             let num = resps.length+1;
-            setFormData((draft) => {draft.experience[index-1].responsibilities.push('')});
+            setFormData((draft) => {draft.experience[index-1][4].push(['',crypto.randomUUID()])});
             setResps((draft) => {draft.push({index: num, key: crypto.randomUUID()})});
         };        
     }
@@ -17,7 +17,7 @@ const ExperienceEntry = ({formData, setFormData, removeEntry, index, isDisabled}
     function removeResp(index) {
         if (resps.length >= 2) {
             setFormData((draft) => {
-                draft.experience[index-1].responsibilities.pop();
+                draft.experience[index-1][4].pop();
             });
             setResps((draft) => {
                 draft.pop();
@@ -47,8 +47,8 @@ const ExperienceEntry = ({formData, setFormData, removeEntry, index, isDisabled}
                   id={`period-${index}`}
                   autoComplete='false'
                   // required
-                  defaultValue={formData.experience[index-1].period}
-                  onChange={(e) => {setFormData((draft) => {draft.experience[index-1].period = e.target.value})}}
+                  defaultValue={formData.experience[index-1][0]}
+                  onChange={(e) => {setFormData((draft) => {draft.experience[index-1][0] = e.target.value})}}
                   disabled={isDisabled}
               />
           </div>
@@ -59,8 +59,8 @@ const ExperienceEntry = ({formData, setFormData, removeEntry, index, isDisabled}
                   id={`location-${index}`}
                   autoComplete='false'
                   // required
-                  defaultValue={formData.experience[index-1].location}
-                  onChange={(e) => {setFormData((draft) => {draft.experience[index-1].location = e.target.value})}}
+                  defaultValue={formData.experience[index-1][1]}
+                  onChange={(e) => {setFormData((draft) => {draft.experience[index-1][1] = e.target.value})}}
                   disabled={isDisabled}
               />
           </div>
@@ -71,8 +71,8 @@ const ExperienceEntry = ({formData, setFormData, removeEntry, index, isDisabled}
                   id={`company-${index}`}
                   autoComplete='false'
                   // required
-                  defaultValue={formData.experience[index-1].company}
-                  onChange={(e) => {setFormData((draft) => {draft.experience[index-1].company = e.target.value})}}
+                  defaultValue={formData.experience[index-1][2]}
+                  onChange={(e) => {setFormData((draft) => {draft.experience[index-1][2] = e.target.value})}}
                   disabled={isDisabled}
               />
           </div>
@@ -83,8 +83,8 @@ const ExperienceEntry = ({formData, setFormData, removeEntry, index, isDisabled}
                   id={`position-${index}`}
                   autoComplete='false'
                   // required
-                  defaultValue={formData.experience[index-1].position}
-                  onChange={(e) => {setFormData((draft) => {draft.experience[index-1].position = e.target.value})}}
+                  defaultValue={formData.experience[index-1][3]}
+                  onChange={(e) => {setFormData((draft) => {draft.experience[index-1][3] = e.target.value})}}
                   disabled={isDisabled}
               />
           </div>
@@ -112,8 +112,8 @@ const ExperienceEntry = ({formData, setFormData, removeEntry, index, isDisabled}
                               id={`resp-${index}.${item.index}`}
                               autoComplete='false'
                               // required
-                              defaultValue={formData.experience[index-1].responsibilities[item.index-1]}
-                              onChange={(e) => {setFormData((draft) => {draft.experience[index-1].responsibilities[item.index-1] = e.target.value})}}
+                              defaultValue={formData.experience[index-1][4][item.index-1][0]}
+                              onChange={(e) => {setFormData((draft) => {draft.experience[index-1][4][item.index-1][0] = e.target.value})}}
                               disabled={isDisabled}
                           />
                       )

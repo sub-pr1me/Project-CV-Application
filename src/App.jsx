@@ -9,43 +9,71 @@ function App() {
     {
       general: {
         firstname: 'Apu',
-        lastname: 'Apustaja',
-        profession: 'professional autist',
+        lastname: 'APUSTAJA',
+        profession: 'PROFESSIONAL AUTIST',
         photo: '../public/image/apu.jpg',
         location: 'NY, USA',
         phone: '+ 9 999 999 9999',
         email: 'apu.forever@gmail.com',
-        summary: 'This is me.'
+        summary: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`
       },
-      social: {
-        linkedin: 'link',
-        github: 'link',
-        facebook: 'link',
-        twitter: 'link',
-        whatsapp: 'link'
-      },
-      education: [
-        {
-          year: '2025',
-          location: 'NY-USA',
-          degree: 'BA in Autism',
-          institution: 'University Of Autism'
-        }
-      ],
-      skills: ['Web development', 'Networking', 'Grilling burgers', '', '', ''],
-      experience: [
-        {
-          period: '2024-2025',
-          location: 'NY-USA',
-          company: 'Autism International Inc',
-          position: 'Chief silliness officer',
-          responsibilities: [
-            'Water cooler support',
-            'Cookie jar refilling',
-            'Watering plants',
-            'Telling weird jokes'
-          ]
-        }
+      social: [['Linked In','../icon/linkedin-plain.svg','Link',crypto.randomUUID()],
+               ['Github','../icon/github-original.svg','Link',crypto.randomUUID()],
+               ['Facebook','../icon/facebook.svg','Link',crypto.randomUUID()],
+               ['Twitter','../icon/twitter-original.svg','Link',crypto.randomUUID()],
+               ['WhatsApp','../icon/whatsapp.svg','Link',crypto.randomUUID()]
+              ],
+      education: [['2020','NY-USA','High School','Autism Public School',crypto.randomUUID()],
+                  ['2020','NY-USA','BACON Certificate','UNIVERSITY OF BACON',crypto.randomUUID()],
+                  ['2024','NY-USA','B.A in Autism','University Of Autism',crypto.randomUUID()],
+                  ['2025','NY-USA','M.A in Autism','University Of Autism',crypto.randomUUID()]
+                 ],
+      skills: [['../icon/check-bold.svg','Web development',crypto.randomUUID()],
+               ['../icon/check-bold.svg','Networking',crypto.randomUUID()],
+               ['../icon/check-bold.svg','Grilling burgers',crypto.randomUUID()],
+               ['../icon/check-bold.svg','Sleeping',crypto.randomUUID()],
+               ['../icon/check-bold.svg','Drawing giraffes',crypto.randomUUID()],
+               ['../icon/check-bold.svg','Playing trombone',crypto.randomUUID()]
+              ],
+      experience: [[
+          '2022-2023',
+          'NY-USA',
+          `McDonald's`,
+          'Burger flipper',
+          [
+            ['Flipping patties', crypto.randomUUID()],
+            ['Frying fries', crypto.randomUUID()],
+            ['Assembling burgers', crypto.randomUUID()],
+            ['Mopping floors', crypto.randomUUID()]
+          ],
+          crypto.randomUUID()
+        ],
+        [
+          '2023-2024',
+          'NY-USA',
+          'CLOWN WORLD INCORPORATED',
+          'Junior silliness manager',
+          [
+            ['Throwing pies at faces', crypto.randomUUID()],
+            ['Honking the honk', crypto.randomUUID()],
+            ['Riding a unicycle', crypto.randomUUID()],
+            ['Juggling burning hedgehogs', crypto.randomUUID()]
+          ],
+          crypto.randomUUID()
+        ],
+        [
+          '2024-2025',
+          'NY-USA',
+          'AUTISM INTERNATIONAL',
+          'Chief silliness officer',
+          [
+            ['Water cooler support', crypto.randomUUID()],
+            ['Cookie jar refilling', crypto.randomUUID()],
+            ['Watering plants', crypto.randomUUID()],
+            ['Telling weird jokes', crypto.randomUUID()]
+          ],
+          crypto.randomUUID()
+        ]
       ]
     }
   );
@@ -61,31 +89,15 @@ function App() {
         email: '',
         summary: ''
       },
-      social: {
-        linkedin: '',
-        github: '',
-        facebook: '',
-        twitter: '',
-        whatsapp: ''
-      },
-      education: [
-        {
-          year: '',
-          location: '',
-          degree: '',
-          institution: ''
-        }
-      ],
+      social: [['Linked In','../icon/linkedin-plain.svg',''],
+               ['Github','../icon/github-original.svg',''],
+               ['Facebook','../icon/facebook.svg',''],
+               ['Twitter','../icon/twitter-original.svg',''],
+               ['WhatsApp','../icon/whatsapp.svg','']
+              ],
+              education: [['','','','',crypto.randomUUID()]],
       skills: ['', '', '', '', '', ''],
-      experience: [
-        {
-          period: '',
-          location: '',
-          company: '',
-          position: '',
-          responsibilities: ['']
-        }
-      ]
+      experience: [['','','','',[['',crypto.randomUUID()]],crypto.randomUUID()]]
     }
   );
 
@@ -97,7 +109,9 @@ function App() {
         formData ={formData}
         setFormData={setFormData}
       />
-      <Mockup />
+      <Mockup
+        items={items}
+      />
     </div>
   )
 }

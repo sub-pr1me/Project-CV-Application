@@ -22,7 +22,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                 id: 'lastname',
                 value: formData.general.lastname,
                 type: 'text',
-                onChange: (e) => setFormData(draft => {draft.general.lastname = e.target.value}),
+                onChange: (e) => setFormData(draft => {draft.general.lastname = e.target.value.toUpperCase()}),
                 title: 'Last Name:'
             },
             {
@@ -30,7 +30,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                 id: 'profession',
                 value: formData.general.profession,
                 type: 'text',
-                onChange: (e) => setFormData(draft => {draft.general.profession = e.target.value}),
+                onChange: (e) => setFormData(draft => {draft.general.profession = e.target.value.toUpperCase()}),
                 title: 'Profession:'
             },
             {
@@ -38,7 +38,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                 id: 'location',
                 value: formData.general.location,
                 type: 'text',
-                onChange: (e) => setFormData(draft => {draft.general.location = e.target.value}),
+                onChange: (e) => setFormData(draft => {draft.general.location = e.target.value.toUpperCase()}),
                 title: 'Location:'
             },
             {

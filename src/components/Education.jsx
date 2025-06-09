@@ -13,7 +13,7 @@ const Education = ({formData, setFormData, items, setItems}) => {
     function addEntry() {
         let num = entries.length+1;
         setEntries((draft) => {draft.push({index: num, key: crypto.randomUUID()})});
-        setFormData((draft) => {draft.education.push({year: '', location: '', degree: '', institution: ''})});
+        setFormData((draft) => {draft.education.push(['','','','',crypto.randomUUID()])});
     };
 
     function removeEntry(index) {

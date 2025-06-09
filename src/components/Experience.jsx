@@ -13,7 +13,7 @@ const Experience = ({formData, setFormData, items, setItems}) => {
     function addEntry() {
         let num = entries.length+1;
         setEntries((draft) => {draft.push({index: num, key: crypto.randomUUID()})});
-        setFormData((draft) => {draft.experience.push({period: '', location: '', company: '', position: '', responsibilities: ['']})});
+        setFormData((draft) => {draft.experience.push(['','','','',[''],crypto.randomUUID()])});
     };
 
     function removeEntry(index) {
@@ -59,7 +59,7 @@ const Experience = ({formData, setFormData, items, setItems}) => {
         </div>
         <button 
             type='button'
-            className={`${styles.add_entry} ${entries.length > 2 ? styles.hidden : null}`}
+            className={`${styles.add_entry} ${entries.length > 3 ? styles.hidden : null}`}
             onClick={addEntry}
             disabled={isDisabled}
             >+Add Entry
