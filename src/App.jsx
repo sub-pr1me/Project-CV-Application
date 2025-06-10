@@ -5,23 +5,23 @@ import Data from './components/Data.jsx'
 import Mockup from './components/Mockup.jsx'
 
 function App() {
-  const [items, setItems] = useState(
+  const [items, setItems] = useImmer(
     {
       general: {
-        firstname: 'Apu',
-        lastname: 'APUSTAJA',
+        firstname: 'Pepe',
+        lastname: 'THE FROG',
         profession: 'PROFESSIONAL AUTIST',
-        photo: '../public/image/apu.jpg',
+        photo: '../image/pepe.jpg',
         location: 'NY, USA',
         phone: '+ 9 999 999 9999',
         email: 'apu.forever@gmail.com',
         summary: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`
       },
-      social: [['Linked In','../icon/linkedin-plain.svg','Link',crypto.randomUUID()],
-               ['Github','../icon/github-original.svg','Link',crypto.randomUUID()],
-               ['Facebook','../icon/facebook.svg','Link',crypto.randomUUID()],
-               ['Twitter','../icon/twitter-original.svg','Link',crypto.randomUUID()],
-               ['WhatsApp','../icon/whatsapp.svg','Link',crypto.randomUUID()]
+      social: [['Linked In','../icon/linkedin-plain.svg','LinkedIn',crypto.randomUUID()],
+               ['Github','../icon/github-original.svg','Github',crypto.randomUUID()],
+               ['Facebook','../icon/facebook.svg','Facebook',crypto.randomUUID()],
+               ['Twitter','../icon/twitter-original.svg','Twitter',crypto.randomUUID()],
+               ['WhatsApp','../icon/whatsapp.svg','WhatsApp',crypto.randomUUID()]
               ],
       education: [['2020','NY-USA','High School','Autism Public School',crypto.randomUUID()],
                   ['2020','NY-USA','BACON Certificate','UNIVERSITY OF BACON',crypto.randomUUID()],
@@ -36,10 +36,23 @@ function App() {
                ['../icon/check-bold.svg','Playing trombone',crypto.randomUUID()]
               ],
       experience: [[
+        '2020-2021',
+        'STHML-SWE',
+        `US Embassy in Sweden`,
+        'Coffee boy',
+        [
+          ['Making coffee', crypto.randomUUID()],
+          ['Buying pretzels', crypto.randomUUID()],
+          ['Shredding newspapers', crypto.randomUUID()],
+          ['Getting rid of witnesses', crypto.randomUUID()]
+        ],
+        crypto.randomUUID()
+      ],
+      [
           '2022-2023',
           'NY-USA',
           `McDonald's`,
-          'Burger flipper',
+          'Burger slave',
           [
             ['Flipping patties', crypto.randomUUID()],
             ['Frying fries', crypto.randomUUID()],
@@ -54,7 +67,7 @@ function App() {
           'CLOWN WORLD INCORPORATED',
           'Junior silliness manager',
           [
-            ['Throwing pies at faces', crypto.randomUUID()],
+            ['Throwing pies into faces', crypto.randomUUID()],
             ['Honking the honk', crypto.randomUUID()],
             ['Riding a unicycle', crypto.randomUUID()],
             ['Juggling burning hedgehogs', crypto.randomUUID()]
@@ -65,7 +78,7 @@ function App() {
           '2024-2025',
           'NY-USA',
           'AUTISM INTERNATIONAL',
-          'Chief silliness officer',
+          'Chief autism officer',
           [
             ['Water cooler support', crypto.randomUUID()],
             ['Cookie jar refilling', crypto.randomUUID()],
@@ -89,17 +102,25 @@ function App() {
         email: '',
         summary: ''
       },
-      social: [['Linked In','../icon/linkedin-plain.svg',''],
-               ['Github','../icon/github-original.svg',''],
-               ['Facebook','../icon/facebook.svg',''],
-               ['Twitter','../icon/twitter-original.svg',''],
-               ['WhatsApp','../icon/whatsapp.svg','']
+      social: [['Linked In','../icon/linkedin-plain.svg','',crypto.randomUUID()],
+               ['Github','../icon/github-original.svg','',crypto.randomUUID()],
+               ['Facebook','../icon/facebook.svg','',crypto.randomUUID()],
+               ['Twitter','../icon/twitter-original.svg','',crypto.randomUUID()],
+               ['WhatsApp','../icon/whatsapp.svg','',crypto.randomUUID()]
               ],
               education: [['','','','',crypto.randomUUID()]],
-      skills: ['', '', '', '', '', ''],
+      skills: [['../icon/check-bold.svg','',crypto.randomUUID()],
+               ['../icon/check-bold.svg','',crypto.randomUUID()],
+               ['../icon/check-bold.svg','',crypto.randomUUID()],
+               ['../icon/check-bold.svg','',crypto.randomUUID()],
+               ['../icon/check-bold.svg','',crypto.randomUUID()],
+               ['../icon/check-bold.svg','',crypto.randomUUID()]
+              ],
       experience: [['','','','',[['',crypto.randomUUID()]],crypto.randomUUID()]]
     }
   );
+
+  const [img, setImg] = useState(null);
 
   return (
     <div className={styles.app_content}>
@@ -108,6 +129,8 @@ function App() {
         setItems={setItems}
         formData ={formData}
         setFormData={setFormData}
+        img={img}
+        setImg={setImg}
       />
       <Mockup
         items={items}

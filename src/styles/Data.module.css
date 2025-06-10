@@ -22,8 +22,8 @@
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
+    height: fit-content;
     gap: 20px;
-    padding-bottom: 50px;
     overflow-x: clip;
     background-color: rgb(74, 72, 75);
 }

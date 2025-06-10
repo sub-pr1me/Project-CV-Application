@@ -52,6 +52,8 @@
 .firstname,
 .lastname {
     font-size: 5vw;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
 }
 
 .profession,
@@ -62,6 +64,7 @@
 
 .profession {
     letter-spacing: 0.2vw;
+    font-weight: 300;
 }
 
 .summary_content {
@@ -208,7 +211,7 @@
 .edu_content {
     height: 100%;
     font-size: 2.2vw;
-    gap: 5vw;
+    gap: 3vw;
     padding-top: 2vw;
     font-weight: 300;
     color: rgb(97, 97, 97);
@@ -216,6 +219,7 @@
 
 .edu_item {
     gap: 3vw;
+    justify-content: flex-start;
 }
 
 .soc_content div,
@@ -237,6 +241,12 @@
    gap: 1vw;
    align-items: center;
    margin-top: 0.7vw;
+}
+
+.ski_name {
+    line-height: 2.5vw;
+    padding-top: 1vw;
+    min-width: 70%;    
 }
 
 .soc_img,
@@ -268,9 +278,14 @@
 
 .edu_left,
 .edu_right {
-    gap: 1vw;
+    gap: 0.5vw;
     justify-content: flex-end;
     align-items: flex-start;
+}
+
+.edu_left {
+    min-width: 30%;
+    max-width: 30%;
 }
 
 .exp_content {

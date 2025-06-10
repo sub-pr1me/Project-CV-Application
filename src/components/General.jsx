@@ -3,7 +3,7 @@ import { useImmer } from "use-immer"
 import styles from '../styles/General.module.css'
 import InputGeneral from './InputGeneral.jsx'
 
-const General = ({formData, setFormData, items, setItems}) => {
+const General = ({formData, setFormData, setItems, img, setImg}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
     const [isDisabled, setIsDisabled] = useState(false);
@@ -70,7 +70,7 @@ const General = ({formData, setFormData, items, setItems}) => {
                 id: 'photo',
                 value: formData.general.photo,
                 type: 'file',
-                onChange: (e) => setFormData(draft => {draft.general.photo = e.target.value}),
+                onChange: (e) => setImg(URL.createObjectURL(e.target.files[0])),
                 title: 'Upload Photo:'
             }
         ]
@@ -78,7 +78,9 @@ const General = ({formData, setFormData, items, setItems}) => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      setItems({...items, general: formData.general});
+      setItems((draft) => {draft.general = formData.general});
+      if (img) {setItems((draft) => {draft.general.photo = img})};
+      if (!img) {setItems((draft) => {draft.general.photo = '../public/image/apu.jpg'})};
       setShowSubmit(!showSubmit);
       setIsDisabled(!isDisabled);
     };

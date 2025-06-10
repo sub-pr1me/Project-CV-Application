@@ -8,7 +8,7 @@ import Education from './Education.jsx'
 import Skills from './Skills.jsx'
 import Experience from './Experience.jsx'
 
-const Data = ({items, setItems, formData, setFormData}) => {
+const Data = ({items, setItems, formData, setFormData, img, setImg}) => {
   const [section, setSection] = useState('gen')
 
   function switchSection(chosen) {
@@ -73,27 +73,29 @@ const Data = ({items, setItems, formData, setFormData}) => {
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}
+                  img={img}
+                  setImg={setImg}
                 />
                 <Social
-                  items={items}
+                  img={img}
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}
                 />
                 <Education
-                  items={items}
+                  img={img}
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}
                 />
                 <Skills
-                  items={items}
+                  img={img}
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}
                 />
                 <Experience
-                  items={items}
+                  img={img}
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}

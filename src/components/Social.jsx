@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useImmer } from 'use-immer';
 import InputSocial from './InputSocial';
 
-const Social = ({formData, setFormData, items, setItems}) => {
+const Social = ({formData, setFormData, img, setItems}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [fields, setFields] = useImmer(
         [
@@ -54,7 +54,8 @@ const Social = ({formData, setFormData, items, setItems}) => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      setItems({...items, social: formData.social});
+      setItems((draft) => {draft.social = formData.social});
+      if (img) {setItems((draft) => {draft.general.photo = img})};
       setShowSubmit(!showSubmit);
       setIsDisabled(!isDisabled);
     };

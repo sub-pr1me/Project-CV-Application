@@ -13,7 +13,7 @@ const Mockup = ({items}) => {
                     <div className={styles.profession}>{items.general.profession}</div>
                 </div>
                 <div className={styles.center}>
-                    <img src='../../image/apu.jpg' alt="Photo" />
+                    <img src={items.general.photo} alt="Photo" />
                 </div>
                 <div className={styles.right}>
                     <div className={styles.location}>
@@ -59,8 +59,8 @@ const Mockup = ({items}) => {
                                 if (item[1] !== '') {
                                     return (
                                         <div key={item[2]} className={styles.ski_item}>
-                                            <img className={styles.ski_img} src={`${item[0]}`} alt='' />
-                                            <div className={styles.ski_item}>{item[1]}</div>
+                                            <img className={styles.ski_img} src={`${item[0]}`} alt={item[1]} />
+                                            <div className={styles.ski_name}>{item[1]}</div>
                                         </div>
                                     )
                                 }

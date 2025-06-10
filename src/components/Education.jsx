@@ -4,7 +4,7 @@ import { useImmer } from "use-immer"
 import styles from '../styles/Education.module.css'
 import EducationEntry from '../components/EducationEntry.jsx'
 
-const Education = ({formData, setFormData, items, setItems}) => {
+const Education = ({formData, setFormData, img, setItems}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
     const [entries, setEntries] = useImmer([{index: 1, key: crypto.randomUUID()}]);
@@ -28,7 +28,8 @@ const Education = ({formData, setFormData, items, setItems}) => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      setItems({...items, education: formData.education});
+      setItems((draft) => {draft.education = formData.education});
+      if (img) {setItems((draft) => {draft.general.photo = img})};
       setShowSubmit(!showSubmit);
       setShowEdit(!showEdit);
       setIsDisabled(!isDisabled);

@@ -4,7 +4,7 @@ import { useImmer } from "use-immer"
 import styles from '../styles/Experience.module.css'
 import ExperienceEntry from '../components/ExperienceEntry.jsx'
 
-const Experience = ({formData, setFormData, items, setItems}) => {
+const Experience = ({formData, setFormData, img, setItems}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
     const [entries, setEntries] = useImmer([{index: 1, key: crypto.randomUUID()}]);
@@ -13,7 +13,7 @@ const Experience = ({formData, setFormData, items, setItems}) => {
     function addEntry() {
         let num = entries.length+1;
         setEntries((draft) => {draft.push({index: num, key: crypto.randomUUID()})});
-        setFormData((draft) => {draft.experience.push(['','','','',[''],crypto.randomUUID()])});
+        setFormData((draft) => {draft.experience.push(['','','','',[['',crypto.randomUUID()]],crypto.randomUUID()])});
     };
 
     function removeEntry(index) {
@@ -28,7 +28,8 @@ const Experience = ({formData, setFormData, items, setItems}) => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      setItems({...items, experience: formData.experience});
+      setItems((draft) => {draft.experience = formData.experience});
+      if (img) {setItems((draft) => {draft.general.photo = img})};
       setShowSubmit(!showSubmit);
       setShowEdit(!showEdit);
       setIsDisabled(!isDisabled);
