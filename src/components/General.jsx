@@ -3,7 +3,7 @@ import { useImmer } from "use-immer"
 import styles from '../styles/General.module.css'
 import InputGeneral from './InputGeneral.jsx'
 
-const General = ({formData, setFormData, setItems, img, setImg}) => {
+const General = ({formData, setFormData, setItems, img, setImg, section}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
     const [isDisabled, setIsDisabled] = useState(false);

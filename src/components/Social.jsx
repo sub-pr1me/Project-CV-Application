@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useImmer } from 'use-immer';
 import InputSocial from './InputSocial';
 
-const Social = ({formData, setFormData, img, setItems}) => {
+const Social = ({formData, setFormData, img, setItems, section}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [fields, setFields] = useImmer(
         [

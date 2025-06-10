@@ -76,3 +76,7 @@ button[id="ed"] {
 .shownFlex {
     display: flex;
 }
+
+.inactive {
+    transform: scaleY(0%);
+}

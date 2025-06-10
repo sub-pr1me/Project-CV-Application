@@ -58,7 +58,7 @@
 
 .profession,
 .summary .title {
-    font-size: 3vw;
+    font-size: 2.7vw;
     font-weight: 600;
 }
 
@@ -189,7 +189,7 @@
 .skills .title,
 .education .title,
 .experience .title {
-    font-size: 2.8vw;
+    font-size: 2.7vw;
     padding-bottom: 1%;
     border-bottom: 0.4vw solid rgb(106, 106, 255);
     width: fit-content;
@@ -317,4 +317,5 @@
 
 li {
     color: black;
+    font-size: 2vw;
 }

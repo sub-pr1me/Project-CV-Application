@@ -4,7 +4,7 @@ import { useImmer } from "use-immer"
 import styles from '../styles/Education.module.css'
 import EducationEntry from '../components/EducationEntry.jsx'
 
-const Education = ({formData, setFormData, img, setItems}) => {
+const Education = ({formData, setFormData, img, setItems, section}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
     const [entries, setEntries] = useImmer([{index: 1, key: crypto.randomUUID()}]);
@@ -42,7 +42,7 @@ const Education = ({formData, setFormData, img, setItems}) => {
     };
 
   return (
-    <form className={styles.education_container} onSubmit={handleSubmit}>
+    <form className={`${styles.education_container} ${section !== 'edu' ? styles.hidden : null}`} onSubmit={handleSubmit}>
         <div className={styles.title}>Add education info:</div>
         <div className={styles.input_container}>
             {entries.map((entry) => {

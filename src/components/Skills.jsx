@@ -5,7 +5,7 @@ import styles from '../styles/Skills.module.css'
 import InputSkills from './InputSkills.jsx'
 
 
-const Skills = ({formData, setFormData, img, setItems}) => {
+const Skills = ({formData, setFormData, img, setItems, section}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [isDisabled, setIsDisabled] = useState(false);
     const [fields, setFields] = useImmer(

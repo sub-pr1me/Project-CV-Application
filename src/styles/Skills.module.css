@@ -62,3 +62,7 @@
 .hidden {
     display: none;
 }
+
+.inactive {
+    transform: scaleY(0%);
+}

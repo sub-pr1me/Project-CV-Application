@@ -4,7 +4,7 @@ import { useImmer } from "use-immer"
 import styles from '../styles/Experience.module.css'
 import ExperienceEntry from '../components/ExperienceEntry.jsx'
 
-const Experience = ({formData, setFormData, img, setItems}) => {
+const Experience = ({formData, setFormData, img, setItems, section}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
     const [entries, setEntries] = useImmer([{index: 1, key: crypto.randomUUID()}]);
@@ -42,7 +42,7 @@ const Experience = ({formData, setFormData, img, setItems}) => {
     };
 
   return (
-    <form className={styles.experience_container} onSubmit={handleSubmit}>
+    <form className={`${styles.experience_container} ${section !== 'exp' ? styles.hidden : null}`} onSubmit={handleSubmit}>
         <div className={styles.title}>Add work experience info:</div>
         <div className={styles.input_container}>
             {entries.map((entry) => {

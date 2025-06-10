@@ -14,7 +14,7 @@ function App() {
         photo: '../image/pepe.jpg',
         location: 'NY, USA',
         phone: '+ 9 999 999 9999',
-        email: 'apu.forever@gmail.com',
+        email: 'pepe.forever@gmail.com',
         summary: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`
       },
       social: [['Linked In','../icon/linkedin-plain.svg','LinkedIn',crypto.randomUUID()],
@@ -70,7 +70,7 @@ function App() {
             ['Throwing pies into faces', crypto.randomUUID()],
             ['Honking the honk', crypto.randomUUID()],
             ['Riding a unicycle', crypto.randomUUID()],
-            ['Juggling burning hedgehogs', crypto.randomUUID()]
+            ['Juggling hedgehogs', crypto.randomUUID()]
           ],
           crypto.randomUUID()
         ],

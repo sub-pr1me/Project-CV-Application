@@ -75,30 +75,35 @@ const Data = ({items, setItems, formData, setFormData, img, setImg}) => {
                   setFormData={setFormData}
                   img={img}
                   setImg={setImg}
+                  section={section}
                 />
                 <Social
                   img={img}
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}
+                  section={section}
                 />
                 <Education
                   img={img}
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}
+                  section={section}
                 />
                 <Skills
                   img={img}
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}
+                  section={section}
                 />
                 <Experience
                   img={img}
                   setItems={setItems}
                   formData ={formData}
                   setFormData={setFormData}
+                  section={section}
                 />
           </div>          
         </div>            
