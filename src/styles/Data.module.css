@@ -85,7 +85,14 @@
     justify-content: center;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
+    .data_container{
+        width: 50%;
+        height: clamp(100vh, fit-content, fit-content);
+    }
 
+    .app_name {
+        font-size: clamp(15px, 2.5vw, 20px);
+    }
 
 }
