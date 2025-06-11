@@ -42,7 +42,7 @@ const Education = ({formData, setFormData, img, setItems, section}) => {
     };
 
   return (
-    <form className={`${styles.education_container} ${section !== 'edu' ? styles.hidden : null}`} onSubmit={handleSubmit}>
+    <form className={`${styles.education_container} ${section !== 'edu' ? styles.inactive : null}`} onSubmit={handleSubmit}>
         <div className={styles.title}>Add education info:</div>
         <div className={styles.input_container}>
             {entries.map((entry) => {

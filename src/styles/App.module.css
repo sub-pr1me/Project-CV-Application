@@ -1,9 +1,13 @@
-
-/* * {
+/* 
+.app_content div {
     outline: 1px solid greenyellow;
 } */
 
 .app_content {
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 800px) {
+
 }

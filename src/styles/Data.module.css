@@ -49,27 +49,27 @@
 }
 
 .gen {
-    transform: translateX(33.333333333%);
+    transform: translateX(40%);
     transition: all 0.2s ease-in;
 }
 
 .soc {
-    transform: translateX(0%);
+    transform: translateX(20%);
     transition: all 0.2s ease-in;
 }
 
 .edu {
-    transform: translateX(-12.5%);
+    transform: translateX(0%);
     transition: all 0.2s ease-in;
 }
 
 .ski {
-    transform: translateX(-33.36%);
+    transform: translateX(-20%);
     transition: all 0.2s ease-in;
 }
 
 .exp {
-    transform: translateX(-37.55%);
+    transform: translateX(-40%);
     transition: all 0.2s ease-in;
 }
 
@@ -83,4 +83,9 @@
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
+}
+
+@media (min-width: 800px) {
+
+
 }

@@ -42,7 +42,7 @@ const Experience = ({formData, setFormData, img, setItems, section}) => {
     };
 
   return (
-    <form className={`${styles.experience_container} ${section !== 'exp' ? styles.hidden : null}`} onSubmit={handleSubmit}>
+    <form className={`${styles.experience_container} ${section !== 'exp' ? styles.inactive : null}`} onSubmit={handleSubmit}>
         <div className={styles.title}>Add work experience info:</div>
         <div className={styles.input_container}>
             {entries.map((entry) => {
