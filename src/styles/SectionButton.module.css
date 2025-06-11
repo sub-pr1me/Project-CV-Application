@@ -4,13 +4,13 @@
     justify-content: flex-start;
     align-items: center;
     width: 20vw;
-    color: white;
+    color: #ffeacc;
     cursor: pointer;
 }
 
 .img_container img {
     width: clamp(30px, 8vw, 8vw);
-    filter: invert(100%);
+    filter: invert(95%) sepia(5%) saturate(2486%) hue-rotate(313deg) brightness(103%) contrast(104%);
     align-self: center;
 }
 
@@ -25,16 +25,16 @@
 @media (min-width: 700px) {
 
     .btn_container {
-        width: 1.8%;
+        width: clamp(6.3px, 70px, 100px);
     }
 
     .img_container img {
-        width: clamp(30px, 5vw, 50px);
+        width: clamp(30px, 5vw, 40px);
     }
 
     .text {
-        font-size: clamp(10px, 1.2vw, 13px);
-        line-height: clamp(15px, 1.3vw, 20px);
+        font-size: 10px;
+        line-height: 16px
     }
 
 }

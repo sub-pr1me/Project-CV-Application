@@ -33,7 +33,7 @@
     font-size: clamp(15px, 3.5vw, 3.5vw);
     font-weight: 900;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -85,14 +85,23 @@
     justify-content: center;
 }
 
+input,
+textarea {
+    background-color: rgb(255, 234, 204);
+}
+
 @media (min-width: 700px) {
     .data_container{
-        width: 50%;
-        height: clamp(100vh, fit-content, fit-content);
+        width: clamp(350px, 50%, 490px);
+        margin-top: 6vh;
     }
 
     .app_name {
-        font-size: clamp(15px, 2.5vw, 20px);
+        position: absolute;
+        top: 0px;
+        left: 30%;
+        right: 30%;
+        font-size: clamp(24px, 24px, 25px);
     }
 
 }

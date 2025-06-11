@@ -111,7 +111,7 @@ const General = ({formData, setFormData, setItems, img, setImg, section}) => {
                 }                
             })}
             <div className={styles.input_wrapper}>
-                <label htmlFor='summary'>Summary:</label>
+                <label className={styles.label} htmlFor='summary'>Summary:</label>
                 <textarea
                     type='text'
                     id='summary'

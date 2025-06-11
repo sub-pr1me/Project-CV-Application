@@ -4,7 +4,7 @@ import styles from '../styles/InputGeneral.module.css'
 const InputGeneral = ({id, defaultValue, type, onChange, title, isDisabled}) => {
   return (
     <div className={styles.input_wrapper}>
-        <label htmlFor={id}>{title}</label>
+        <label className={styles.label} htmlFor={id}>{title}</label>
         <input
             type={type} 
             id={id}

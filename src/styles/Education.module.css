@@ -81,11 +81,5 @@ button[id="ed"] {
 .inactive {
     height: 0vh;
     opacity: 0;
-}
-
-@media (min-width: 700px) {
-    .inactive {
-        height: 100vh;
-        opacity: 1;
-    }
+    transform: translateY(-1700%);
 }
