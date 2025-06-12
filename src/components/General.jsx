@@ -3,11 +3,11 @@ import { useImmer } from "use-immer"
 import styles from '../styles/General.module.css'
 import InputGeneral from './InputGeneral.jsx'
 
-const General = ({formData, setFormData, setItems, img, setImg, section}) => {
+const General = ({formData, setFormData, setItems, img, setImg}) => {
     const [showSubmit, setShowSubmit] = useState(true);
     const [showEdit, setShowEdit] = useState(false);
     const [isDisabled, setIsDisabled] = useState(false);
-    const [fields, setFielfds] = useImmer(
+    const [fields, setFields] = useImmer(
         [
             {
                 key: crypto.randomUUID(),
@@ -106,6 +106,7 @@ const General = ({formData, setFormData, setItems, img, setImg, section}) => {
                             onChange={field.onChange}
                             title={field.title}
                             isDisabled={isDisabled}
+                            setFields={setFields}
                         />                    
                     )
                 }                

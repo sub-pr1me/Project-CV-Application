@@ -8,6 +8,17 @@
     flex-direction: column;
 }
 
+button {
+    border: none;
+}
+
+button:hover:enabled {
+    transform: scale(105%, 105%);
+    color: rgb(255, 234, 204);
+    background-color: rgb(94, 52, 133);
+    transition: 0.2s ease-in-out;
+}
+
 @media (min-width: 700px) {
     .app_content {
         flex-direction: row;

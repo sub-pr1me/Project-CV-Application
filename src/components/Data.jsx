@@ -34,30 +34,35 @@ const Data = ({items, setItems, formData, setFormData, img, setImg}) => {
                 switchSection={switchSection}
                 id={'gen'}
                 src={'../icon/card-account-details.svg'}
-                text={'GENERAL INFO'}
+                section={section}
+                text={'GENERAL INFO'}                
               />
               <SectionButton
                 switchSection={switchSection}
                 id={'soc'}
                 src={'../icon/web.svg'}
+                section={section}
                 text={'SOCIAL MEDIA'}
               />
               <SectionButton
                 switchSection={switchSection}
                 id={'edu'}
                 src={'../icon/school.svg'}
+                section={section}
                 text={'EDUCATION'}
               />
               <SectionButton
                 switchSection={switchSection}
                 id={'ski'}
                 src={'../icon/account-tie.svg'}
+                section={section}
                 text={'SKILLS'}
               />
               <SectionButton
                 switchSection={switchSection}
                 id={'exp'}
                 src={'../icon/briefcase-check.svg'}
+                section={section}
                 text={'EXPERIENCE'}
               />
             </div>

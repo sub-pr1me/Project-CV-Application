@@ -8,6 +8,11 @@
     cursor: pointer;
 }
 
+.btn_container:hover {
+    transform: scale(110%, 110%);
+    transition: 0.2s ease-in-out;
+}
+
 .img_container img {
     width: clamp(30px, 8vw, 8vw);
     filter: invert(95%) sepia(5%) saturate(2486%) hue-rotate(313deg) brightness(103%) contrast(104%);
@@ -20,6 +25,11 @@
     line-height: 12px;
     padding: 0px 10px;
     overflow-wrap: break-word;
+}
+
+.chosen {
+    filter: saturate(500%);
+    transition: 0.1s ease-in-out;
 }
 
 @media (min-width: 700px) {

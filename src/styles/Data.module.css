@@ -85,8 +85,8 @@
     justify-content: center;
 }
 
-input,
-textarea {
+input:enabled,
+textarea:enabled {
     background-color: rgb(255, 234, 204);
 }
 

@@ -33,6 +33,14 @@ textarea {
 }
 
 input[type='file'] {
-    background-color: rgb(255, 234, 204);
     width: 250px;
+}
+
+input[type='file']:enabled {
+    background-color: rgb(255, 234, 204);
+}
+
+input[type='file']:disabled {
+    color: rgb(255, 234, 204);
+    background-color: rgb(53, 53, 53);
 }
